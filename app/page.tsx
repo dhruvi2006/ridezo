@@ -247,13 +247,13 @@ export default function Home() {
                           <span className="text-yellow-400 text-lg">✓</span>
                         </div>
                         <span className="text-gray-800 text-sm">All types of seats: 5, 7, 11, 18, 24 seaters</span>
-                      </li>
+          </li>
                       <li className="flex items-center">
                         <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                           <span className="text-yellow-400 text-lg">✓</span>
                         </div>
                         <span className="text-gray-800 text-sm">Outstation cabs, tempo travellers, self-driver cars</span>
-                      </li>
+          </li>
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
