@@ -1,4 +1,20 @@
 import Header from '../components/Header';
+import {
+  Car,
+  Clock,
+  Shield,
+  Star,
+  DollarSign,
+  Users,
+  MapPin,
+  Building2,
+  Search,
+  AlertTriangle,
+  Building,
+  ChevronDown,
+  Phone,
+  CheckCircle
+} from 'lucide-react';
 
 export default function Home() {
   return (
@@ -12,7 +28,7 @@ export default function Home() {
               <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
                 <div className="text-center lg:text-left">
                   <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight">
-                    Ridezo — Your Ultimate Travel Buddy 🚗
+                    Ridezo — Your Ultimate Travel Buddy <Car className="inline w-8 h-8 ml-2" />
                   </h1>
                   <p className="text-sm sm:text-base md:text-lg mb-4 text-gray-800 leading-relaxed max-w-lg mx-auto lg:mx-0">
                     Pre-booked rides, professional drivers, and reliable daily service. Get to work on time, every time.
@@ -62,7 +78,7 @@ export default function Home() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <span className="text-lg md:text-xl text-yellow-400">⏰</span>
+                    <Clock className="text-lg md:text-xl text-yellow-400" />
                   </div>
                   <h3 className="text-sm md:text-base font-bold mb-2 text-black">Punctuality You Can Count On</h3>
                   <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Pre-book your everyday ride and never worry about delays. We understand the importance of being on time.</p>
@@ -70,7 +86,7 @@ export default function Home() {
 
                 <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <span className="text-lg md:text-xl text-yellow-400">🛡️</span>
+                    <Shield className="text-lg md:text-xl text-yellow-400" />
                   </div>
                   <h3 className="text-sm md:text-base font-bold mb-2 text-black">Verified, Professional Drivers</h3>
                   <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Trained, background-checked drivers who put safety and comfort first in every journey.</p>
@@ -78,7 +94,7 @@ export default function Home() {
 
                 <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <span className="text-lg md:text-xl text-yellow-400">⭐</span>
+                    <Star className="text-lg md:text-xl text-yellow-400" />
                   </div>
                   <h3 className="text-sm md:text-base font-bold mb-2 text-black">Consistent Comfort</h3>
                   <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Same high standard every day — no surprises. Clean, comfortable vehicles every time.</p>
@@ -86,7 +102,7 @@ export default function Home() {
 
                 <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <span className="text-lg md:text-xl text-yellow-400">💰</span>
+                    <DollarSign className="text-lg md:text-xl text-yellow-400" />
                   </div>
                   <h3 className="text-sm md:text-base font-bold mb-2 text-black">Transparent Pricing</h3>
                   <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Clear fares, no surge, no hidden fees. What you see is what you pay.</p>
@@ -94,7 +110,7 @@ export default function Home() {
 
                 <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <span className="text-lg md:text-xl text-yellow-400">👨‍👩‍👧‍👦</span>
+                    <Users className="text-lg md:text-xl text-yellow-400" />
                   </div>
                   <h3 className="text-sm md:text-base font-bold mb-2 text-black">A Family-Like Experience</h3>
                   <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Friendly support that treats your journey like it matters. We care about your comfort and safety.</p>
@@ -102,7 +118,7 @@ export default function Home() {
 
                 <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <span className="text-lg md:text-xl text-yellow-400">🚗</span>
+                    <Car className="text-lg md:text-xl text-yellow-400" />
                   </div>
                   <h3 className="text-sm md:text-base font-bold mb-2 text-black">Your Travel Buddy</h3>
                   <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Reliable service for every journey, big or small. From daily commutes to weekend getaways.</p>
@@ -204,7 +220,7 @@ export default function Home() {
                     <ul className="space-y-4">
                       <li className="flex items-center">
                         <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-yellow-400 text-xl">🗺️</span>
+                          <MapPin className="text-yellow-400 text-xl" />
                         </div>
                         <div>
                           <div className="font-semibold text-black">Tourism & Outstation Trips</div>
@@ -213,7 +229,7 @@ export default function Home() {
                       </li>
                       <li className="flex items-center">
                         <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-yellow-400 text-xl">👨‍👩‍👧‍👦</span>
+                          <Users className="text-yellow-400 text-xl" />
                         </div>
                         <div>
                           <div className="font-semibold text-black">Family & Personal Travel</div>
@@ -222,7 +238,7 @@ export default function Home() {
                       </li>
                       <li className="flex items-center">
                         <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-yellow-400 text-xl">🏙️</span>
+                          <Building2 className="text-yellow-400 text-xl" />
                         </div>
                         <div>
                           <div className="font-semibold text-black">City Rides & Errands</div>
@@ -350,7 +366,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center p-8 bg-black rounded-xl shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-[280px] flex flex-col">
                   <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl text-black">🔍</span>
+                    <Search className="text-2xl text-black" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-yellow-400">Background Checks</h3>
                   <p className="text-gray-300 flex-grow">Comprehensive screening and training for all drivers</p>
@@ -358,7 +374,7 @@ export default function Home() {
 
                 <div className="text-center p-8 bg-black rounded-xl shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-[280px] flex flex-col">
                   <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl text-black">🚗</span>
+                    <Car className="text-2xl text-black" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-yellow-400">Vehicle Inspections</h3>
                   <p className="text-gray-300 flex-grow">Regular maintenance and cleanliness checks</p>
@@ -366,7 +382,7 @@ export default function Home() {
 
                 <div className="text-center p-8 bg-black rounded-xl shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-[280px] flex flex-col">
                   <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl text-black">🆘</span>
+                    <AlertTriangle className="text-2xl text-black" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-yellow-400">Emergency Support</h3>
                   <p className="text-gray-300 flex-grow">24/7 support and live ride tracking</p>
@@ -374,7 +390,7 @@ export default function Home() {
 
                 <div className="text-center p-8 bg-black rounded-xl shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-[280px] flex flex-col">
                   <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl text-black">🛡️</span>
+                    <Shield className="text-2xl text-black" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-yellow-400">Insurance & Compliance</h3>
                   <p className="text-gray-300 flex-grow">Full coverage and local regulation compliance</p>
@@ -396,7 +412,7 @@ export default function Home() {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-yellow-500 p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow h-[500px] flex flex-col">
                   <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl text-yellow-400">🏢</span>
+                    <Building className="text-2xl text-yellow-400" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-black">Office Plans</h3>
                   <p className="text-gray-800 mb-6">Weekly / Monthly subscriptions — predictable monthly billing.</p>
@@ -426,7 +442,7 @@ export default function Home() {
 
                 <div className="bg-yellow-500 p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow h-[500px] flex flex-col">
                   <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl text-yellow-400">🏙️</span>
+                    <Building2 className="text-2xl text-yellow-400" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-black">City Rides</h3>
                   <p className="text-gray-800 mb-6">Metered / per-km pricing with fare estimates up front.</p>
@@ -456,7 +472,7 @@ export default function Home() {
 
                 <div className="bg-yellow-500 p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow h-[500px] flex flex-col">
                   <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl text-yellow-400">🗺️</span>
+                    <MapPin className="text-2xl text-yellow-400" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-black">Outstation</h3>
                   <p className="text-gray-800 mb-6">Fixed quotes based on route and vehicle type.</p>
@@ -544,144 +560,190 @@ export default function Home() {
           </section>
 
           {/* FAQ Section */}
-          <section id="faq" className="py-12 px-4 bg-yellow-100">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-3 text-black">Frequently Asked Questions</h2>
-                <p className="text-base text-gray-800 max-w-xl mx-auto">
+          <section id="faq" className="py-16 md:py-20 px-4 bg-yellow-100">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="text-yellow-400 text-2xl" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
+                <p className="text-lg text-gray-800 max-w-2xl mx-auto">
                   Got questions? We've got answers. Here are the most common questions about our services.
                 </p>
               </div>
 
-          <div className="space-y-3">
-            <div className="group bg-yellow-500 border border-yellow-400 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden min-h-[60px]">
-              <div className="p-4 cursor-pointer">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-black group-hover:text-gray-700 transition-colors pr-2">
-                    Can I pre-book rides for the whole month?
-                  </h3>
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors flex-shrink-0">
-                    <span className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-sm">+</span>
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl shadow-lg border border-yellow-200 overflow-hidden">
+                  <div className="p-6 cursor-pointer group hover:bg-yellow-50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <Clock className="text-yellow-400 text-lg" />
+                        </div>
+                        <h3 className="text-lg font-bold text-black group-hover:text-gray-700 transition-colors">
+                          Can I pre-book rides for the whole month?
+                        </h3>
+                      </div>
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-all duration-300 flex-shrink-0">
+                        <ChevronDown className="text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors transform group-hover:rotate-180 duration-300" />
+                      </div>
+                    </div>
+                    <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
+                      <p className="text-gray-700 text-base leading-relaxed ml-14">
+                        Yes — choose our Office Plan to schedule recurring rides. Perfect for daily commuters who want consistency and reliability. Save time and never worry about booking last-minute rides again.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-gray-800 text-sm leading-relaxed">
-                    Yes — choose our Office Plan to schedule recurring rides. Perfect for daily commuters who want consistency and reliability.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="group bg-yellow-500 border border-yellow-400 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden min-h-[60px]">
-              <div className="p-4 cursor-pointer">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-black group-hover:text-gray-700 transition-colors pr-2">
-                    Are drivers background-checked?
-                  </h3>
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors flex-shrink-0">
-                    <span className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-sm">+</span>
+                <div className="bg-white rounded-xl shadow-lg border border-yellow-200 overflow-hidden">
+                  <div className="p-6 cursor-pointer group hover:bg-yellow-50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <Shield className="text-yellow-400 text-lg" />
+                        </div>
+                        <h3 className="text-lg font-bold text-black group-hover:text-gray-700 transition-colors">
+                          Are drivers background-checked?
+                        </h3>
+                      </div>
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-all duration-300 flex-shrink-0">
+                        <ChevronDown className="text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors transform group-hover:rotate-180 duration-300" />
+                      </div>
+                    </div>
+                    <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
+                      <p className="text-gray-700 text-base leading-relaxed ml-14">
+                        Absolutely. All drivers undergo comprehensive ID verification, background checks, and professional training to ensure your safety. We prioritize passenger security above everything else.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-gray-800 text-sm leading-relaxed">
-                    Absolutely. All drivers undergo comprehensive ID verification, background checks, and professional training to ensure your safety.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="group bg-yellow-500 border border-yellow-400 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden min-h-[60px]">
-              <div className="p-4 cursor-pointer">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-black group-hover:text-gray-700 transition-colors pr-2">
-                    What if my driver is late?
-                  </h3>
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors flex-shrink-0">
-                    <span className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-sm">+</span>
+                <div className="bg-white rounded-xl shadow-lg border border-yellow-200 overflow-hidden">
+                  <div className="p-6 cursor-pointer group hover:bg-yellow-50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <AlertTriangle className="text-yellow-400 text-lg" />
+                        </div>
+                        <h3 className="text-lg font-bold text-black group-hover:text-gray-700 transition-colors">
+                          What if my driver is late?
+                        </h3>
+                      </div>
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-all duration-300 flex-shrink-0">
+                        <ChevronDown className="text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors transform group-hover:rotate-180 duration-300" />
+                      </div>
+                    </div>
+                    <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
+                      <p className="text-gray-700 text-base leading-relaxed ml-14">
+                        We monitor every ride in real-time. If there's a delay, we'll notify you immediately via WhatsApp and provide support to resolve the issue quickly. Your time matters to us.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-gray-800 text-sm leading-relaxed">
-                    We monitor every ride in real-time. If there's a delay, we'll notify you immediately and provide support to resolve the issue quickly.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="group bg-yellow-500 border border-yellow-400 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden min-h-[60px]">
-              <div className="p-4 cursor-pointer">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-black group-hover:text-gray-700 transition-colors pr-2">
-                    Can Ridezo handle outstation trips?
-                  </h3>
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors flex-shrink-0">
-                    <span className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-sm">+</span>
+                <div className="bg-white rounded-xl shadow-lg border border-yellow-200 overflow-hidden">
+                  <div className="p-6 cursor-pointer group hover:bg-yellow-50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <MapPin className="text-yellow-400 text-lg" />
+                        </div>
+                        <h3 className="text-lg font-bold text-black group-hover:text-gray-700 transition-colors">
+                          Can Ridezo handle outstation trips?
+                        </h3>
+                      </div>
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-all duration-300 flex-shrink-0">
+                        <ChevronDown className="text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors transform group-hover:rotate-180 duration-300" />
+                      </div>
+                    </div>
+                    <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
+                      <p className="text-gray-700 text-base leading-relaxed ml-14">
+                        Yes — we offer comprehensive outstation and tourism packages with pre-planned routes and trusted drivers for long-distance travel. Perfect for holidays, business trips, or weekend getaways.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-gray-800 text-sm leading-relaxed">
-                    Yes — we offer comprehensive outstation and tourism packages with pre-planned routes and trusted drivers for long-distance travel.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="group bg-yellow-500 border border-yellow-400 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden min-h-[60px]">
-              <div className="p-4 cursor-pointer">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-black group-hover:text-gray-700 transition-colors pr-2">
-                    How do I book a ride?
-                  </h3>
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors flex-shrink-0">
-                    <span className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-sm">+</span>
+                <div className="bg-white rounded-xl shadow-lg border border-yellow-200 overflow-hidden">
+                  <div className="p-6 cursor-pointer group hover:bg-yellow-50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <Phone className="text-yellow-400 text-lg" />
+                        </div>
+                        <h3 className="text-lg font-bold text-black group-hover:text-gray-700 transition-colors">
+                          How do I book a ride?
+                        </h3>
+                      </div>
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-all duration-300 flex-shrink-0">
+                        <ChevronDown className="text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors transform group-hover:rotate-180 duration-300" />
+                      </div>
+                    </div>
+                    <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
+                      <p className="text-gray-700 text-base leading-relaxed ml-14">
+                        All bookings are done via WhatsApp for the fastest service. Just message us with your requirements and get instant confirmation. No apps, no hassle — just direct communication.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-gray-800 text-sm leading-relaxed">
-                    All bookings are done via WhatsApp. Just message us and your ride will be confirmed quickly.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="group bg-yellow-500 border border-yellow-400 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden min-h-[60px]">
-              <div className="p-4 cursor-pointer">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-black group-hover:text-gray-700 transition-colors pr-2">
-                    What types of vehicles are available?
-                  </h3>
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors flex-shrink-0">
-                    <span className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-sm">+</span>
+                <div className="bg-white rounded-xl shadow-lg border border-yellow-200 overflow-hidden">
+                  <div className="p-6 cursor-pointer group hover:bg-yellow-50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <Car className="text-yellow-400 text-lg" />
+                        </div>
+                        <h3 className="text-lg font-bold text-black group-hover:text-gray-700 transition-colors">
+                          What types of vehicles are available?
+                        </h3>
+                      </div>
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-all duration-300 flex-shrink-0">
+                        <ChevronDown className="text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors transform group-hover:rotate-180 duration-300" />
+                      </div>
+                    </div>
+                    <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
+                      <p className="text-gray-700 text-base leading-relaxed ml-14">
+                        5, 7, 11, 18, and 24-seater cabs, tempo travellers, and self-driver cars — perfect for office commutes, city rides, family trips, or group travel. We have the right vehicle for every occasion.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-gray-800 text-sm leading-relaxed">
-                    5, 7, 11, 18, and 24-seater cabs, tempo travellers, and self-driver cars — perfect for office commutes, city rides, or family trips.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="group bg-yellow-500 border border-yellow-400 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden min-h-[60px]">
-              <div className="p-4 cursor-pointer">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-black group-hover:text-gray-700 transition-colors pr-2">
-                    How do I pay?
-                  </h3>
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors flex-shrink-0">
-                    <span className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-sm">+</span>
+                <div className="bg-white rounded-xl shadow-lg border border-yellow-200 overflow-hidden">
+                  <div className="p-6 cursor-pointer group hover:bg-yellow-50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <DollarSign className="text-yellow-400 text-lg" />
+                        </div>
+                        <h3 className="text-lg font-bold text-black group-hover:text-gray-700 transition-colors">
+                          How do I pay?
+                        </h3>
+                      </div>
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-all duration-300 flex-shrink-0">
+                        <ChevronDown className="text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors transform group-hover:rotate-180 duration-300" />
+                      </div>
+                    </div>
+                    <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
+                      <p className="text-gray-700 text-base leading-relaxed ml-14">
+                        Multiple payment options available — credit/debit cards, UPI, net banking, and corporate invoicing for business accounts. All payments are secure and transparent with no hidden charges.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-gray-800 text-sm leading-relaxed">
-                    Multiple payment options available — credit/debit cards, UPI, net banking, and corporate invoicing for business accounts.
-                  </p>
-                </div>
+              </div>
+
+              <div className="text-center mt-12">
+                <p className="text-gray-600 mb-4">Still have questions?</p>
+                <a href="https://wa.me/918053272266?text=Hi! I have a question about Ridezo services" className="inline-flex items-center bg-black text-yellow-400 px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
+                  <Phone className="mr-2" />
+                  Contact Us on WhatsApp
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
           {/* Footer CTA Section */}
           <section id="contact" className="py-12 px-4 bg-black text-yellow-400">
