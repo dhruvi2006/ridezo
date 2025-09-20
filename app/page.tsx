@@ -71,7 +71,7 @@ export default function Home() {
               <div className="text-center mb-8 md:mb-12">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-black">Why Choose Ridezo?</h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto leading-relaxed px-4">
-                  We make commuting smarter, safer, and simpler. Whether you're an office commuter who wants peace of mind every morning, or planning a weekend getaway — Ridezo has you covered.
+                  We make commuting smarter, safer, and simpler. Whether you&apos;re an office commuter who wants peace of mind every morning, or planning a weekend getaway — Ridezo has you covered.
                 </p>
               </div>
 
@@ -209,7 +209,7 @@ export default function Home() {
                   For Everyone Else — Flexible, Anytime, Anywhere
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto px-4">
-                  Ridezo is more than a commute solution — it's your travel buddy for every need. From city errands to weekend getaways.
+                  Ridezo is more than a commute solution — it&apos;s your travel buddy for every need. From city errands to weekend getaways.
                 </p>
               </div>
 
@@ -515,7 +515,7 @@ export default function Home() {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">What Our Customers Say</h2>
                 <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-                  Don't just take our word for it. Here's what our satisfied customers have to say about their Ridezo experience.
+                  Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their Ridezo experience.
                 </p>
               </div>
 
@@ -525,7 +525,7 @@ export default function Home() {
                     <div className="text-black text-2xl">★★★★★</div>
                   </div>
                   <p className="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
-                    "Switching to Ridezo made my mornings stress-free. Always on time and drivers are professional. The pre-booking feature is a game-changer for my daily commute."
+                    &ldquo;Switching to Ridezo made my mornings stress-free. Always on time and drivers are professional. The pre-booking feature is a game-changer for my daily commute.&rdquo;
                   </p>
                   <div className="flex items-center mt-auto">
                     <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-yellow-400 font-bold text-lg mr-4">
@@ -543,7 +543,7 @@ export default function Home() {
                     <div className="text-black text-2xl">★★★★★</div>
                   </div>
                   <p className="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
-                    "Booked an outstation trip for the family — comfortable car and great service. The driver was courteous and the journey was smooth. Highly recommended!"
+                    &ldquo;Booked an outstation trip for the family — comfortable car and great service. The driver was courteous and the journey was smooth. Highly recommended!&rdquo;
                   </p>
                   <div className="flex items-center mt-auto">
                     <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-yellow-400 font-bold text-lg mr-4">
@@ -568,7 +568,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
                 <p className="text-lg text-gray-800 max-w-2xl mx-auto">
-                  Got questions? We've got answers. Here are the most common questions about our services.
+                  Got questions? We&apos;ve got answers. Here are the most common questions about our services.
                 </p>
               </div>
 
@@ -636,7 +636,7 @@ export default function Home() {
                     </div>
                     <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out overflow-hidden">
                       <p className="text-gray-700 text-base leading-relaxed ml-14">
-                        We monitor every ride in real-time. If there's a delay, we'll notify you immediately via WhatsApp and provide support to resolve the issue quickly. Your time matters to us.
+                        We monitor every ride in real-time. If there&apos;s a delay, we&apos;ll notify you immediately via WhatsApp and provide support to resolve the issue quickly. Your time matters to us.
                       </p>
                     </div>
                   </div>
