@@ -24,7 +24,7 @@ const Header = () => {
           {/* CTA Button - All Screen Sizes */}
           <div className="flex items-center">
             <a
-              href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo"
+              href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo"
               className="bg-black text-yellow-400 px-4 py-2 rounded-full font-semibold text-sm hover:bg-gray-800 transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"

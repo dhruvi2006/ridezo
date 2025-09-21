@@ -78,7 +78,7 @@ export default function Home() {
                     Pre-booked rides, professional drivers, and reliable daily service. Get to work on time, every time.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transform">
+                    <a href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transform">
                       Enquire on WhatsApp
                     </a>
                     <a href="#pricing" className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 shadow-2xl hover:scale-105 transform">
@@ -207,7 +207,7 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                    <a href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
                       Enquire on WhatsApp
                     </a>
                   </div>
@@ -240,7 +240,7 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/919654577654?text=Hi! I'd like to explore outstation options with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                    <a href="https://wa.me/919873058354?text=Hi! I'd like to explore outstation options with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
                       Explore Options
                     </a>
                   </div>
@@ -353,7 +353,7 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/919654577654?text=Hi! I'd like to know more about office commute features" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
+                    <a href="https://wa.me/919873058354?text=Hi! I'd like to know more about office commute features" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
                       Learn More
                     </a>
                   </div>
@@ -386,7 +386,7 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/919654577654?text=Hi! I'd like to pre-book office rides with Ridezo" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
+                    <a href="https://wa.me/919873058354?text=Hi! I'd like to pre-book office rides with Ridezo" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
                       Enquire on WhatsApp
                     </a>
                   </div>
@@ -784,7 +784,7 @@ export default function Home() {
               </div>
 
               <div className="text-center mt-12">
-                <a href="https://wa.me/919654577654?text=Hi! I'd like to know about Ridezo pricing plans" className="bg-black text-yellow-400 px-8 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg inline-block">
+                <a href="https://wa.me/919873058354?text=Hi! I'd like to know about Ridezo pricing plans" className="bg-black text-yellow-400 px-8 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg inline-block">
                   Enquire on WhatsApp
                 </a>
               </div>
@@ -1023,7 +1023,7 @@ export default function Home() {
 
               <div className="text-center mt-12">
                 <p className="text-gray-600 mb-4">Still have questions?</p>
-                <a href="https://wa.me/919654577654?text=Hi! I have a question about Ridezo services" className="inline-flex items-center bg-black text-yellow-400 px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
+                <a href="https://wa.me/919873058354?text=Hi! I have a question about Ridezo services" className="inline-flex items-center bg-black text-yellow-400 px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
                   <Phone className="mr-2" />
                   Contact Us on WhatsApp
                 </a>
@@ -1056,11 +1056,11 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg text-center">
+                <a href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg text-center">
                   Enquire on WhatsApp
                 </a>
-                <a href="tel:+91-9654577654" className="border-2 border-yellow-500 text-yellow-500 px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-500 hover:text-black transition-colors text-center">
-                  Call Us: +91-9654577654
+                <a href="tel:+91-9873058354" className="border-2 border-yellow-500 text-yellow-500 px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-500 hover:text-black transition-colors text-center">
+                  Call Us: +91-9873058354
                 </a>
               </div>
 
@@ -1075,7 +1075,7 @@ export default function Home() {
           {/* Floating WhatsApp Button */}
           <div className="fixed bottom-6 right-6 z-50">
             <a 
-              href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" 
+              href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" 
               className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
           target="_blank"
           rel="noopener noreferrer"
