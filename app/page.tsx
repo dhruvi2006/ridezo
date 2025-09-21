@@ -1,3 +1,5 @@
+'use client';
+
 import Header from '../components/Header';
 import {
   Car,
@@ -15,6 +17,32 @@ import {
   Phone,
   CheckCircle
 } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+// Animation variants
+const fadeInUp = {
+  initial: { opacity: 0, y: 60, filter: "blur(10px)" },
+  animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  transition: { duration: 0.8, ease: "easeOut" }
+};
+
+const fadeInLeft = {
+  initial: { opacity: 0, x: -60, filter: "blur(10px)" },
+  animate: { opacity: 1, x: 0, filter: "blur(0px)" },
+  transition: { duration: 0.8, ease: "easeOut" }
+};
+
+const fadeInRight = {
+  initial: { opacity: 0, x: 60, filter: "blur(10px)" },
+  animate: { opacity: 1, x: 0, filter: "blur(0px)" },
+  transition: { duration: 0.8, ease: "easeOut" }
+};
+
+const scaleIn = {
+  initial: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+  animate: { opacity: 1, scale: 1, filter: "blur(0px)" },
+  transition: { duration: 0.8, ease: "easeOut" }
+};
 
 export default function Home() {
   return (
@@ -23,40 +51,60 @@ export default function Home() {
           <Header />
 
           {/* Hero Section */}
-          <section id="hero" className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-black py-16 md:py-24 px-4 pt-24 md:pt-36">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
-                <div className="text-center lg:text-left">
-                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight">
-                    Ridezo — Your Ultimate Travel Buddy <Car className="inline w-8 h-8 ml-2" />
+          <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+            {/* Video Background */}
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/hero_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/60"></div>
+
+            {/* Content */}
+            <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-white">
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div className="lg:text-left">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+                    Ridezo — Your Ultimate Travel Buddy <Car className="inline w-10 h-10 ml-3 text-yellow-400" />
                   </h1>
-                  <p className="text-sm sm:text-base md:text-lg mb-4 text-gray-800 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                  <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                     Pre-booked rides, professional drivers, and reliable daily service. Get to work on time, every time.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                    <a href="https://wa.me/918053272266?text=Hi! I'd like to book a ride with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors text-sm md:text-base shadow-lg text-center">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transform">
                       Enquire on WhatsApp
+                    </a>
+                    <a href="#pricing" className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 shadow-2xl hover:scale-105 transform">
+                      View Pricing
                     </a>
                   </div>
                 </div>
+
                 <div className="hidden lg:block">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 shadow-2xl">
-                    <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-2xl border border-white/20">
+                    <div className="grid grid-cols-2 gap-6">
                       <div className="text-center">
-                        <div className="text-xl font-bold text-black">500+</div>
-                        <div className="text-xs text-gray-700">Happy Customers</div>
+                        <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
+                        <div className="text-sm text-gray-200">Happy Customers</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-xl font-bold text-black">99%</div>
-                        <div className="text-xs text-gray-700">On-Time Rate</div>
+                        <div className="text-3xl font-bold text-yellow-400 mb-2">99%</div>
+                        <div className="text-sm text-gray-200">On-Time Rate</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-xl font-bold text-black">24/7</div>
-                        <div className="text-xs text-gray-700">Support</div>
+                        <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
+                        <div className="text-sm text-gray-200">Support</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-xl font-bold text-black">5★</div>
-                        <div className="text-xs text-gray-700">Rating</div>
+                        <div className="text-3xl font-bold text-yellow-400 mb-2">5★</div>
+                        <div className="text-sm text-gray-200">Rating</div>
                       </div>
                     </div>
                   </div>
@@ -65,158 +113,69 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Why Ridezo Section */}
-          <section id="why-ridezo" className="py-16 md:py-20 px-4 bg-yellow-50">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-8 md:mb-12">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-black">Why Choose Ridezo?</h2>
-                <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto leading-relaxed px-4">
-                  We make commuting smarter, safer, and simpler. Whether you&apos;re an office commuter who wants peace of mind every morning, or planning a weekend getaway — Ridezo has you covered.
-                </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <Clock className="text-lg md:text-xl text-yellow-400" />
-                  </div>
-                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Punctuality You Can Count On</h3>
-                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Pre-book your everyday ride and never worry about delays. We understand the importance of being on time.</p>
-                </div>
-
-                <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <Shield className="text-lg md:text-xl text-yellow-400" />
-                  </div>
-                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Verified, Professional Drivers</h3>
-                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Trained, background-checked drivers who put safety and comfort first in every journey.</p>
-                </div>
-
-                <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <Star className="text-lg md:text-xl text-yellow-400" />
-                  </div>
-                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Consistent Comfort</h3>
-                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Same high standard every day — no surprises. Clean, comfortable vehicles every time.</p>
-                </div>
-
-                <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <DollarSign className="text-lg md:text-xl text-yellow-400" />
-                  </div>
-                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Transparent Pricing</h3>
-                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Clear fares, no surge, no hidden fees. What you see is what you pay.</p>
-                </div>
-
-                <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <Users className="text-lg md:text-xl text-yellow-400" />
-                  </div>
-                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">A Family-Like Experience</h3>
-                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Friendly support that treats your journey like it matters. We care about your comfort and safety.</p>
-                </div>
-
-                <div className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
-                    <Car className="text-lg md:text-xl text-yellow-400" />
-                  </div>
-                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Your Travel Buddy</h3>
-                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Reliable service for every journey, big or small. From daily commutes to weekend getaways.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Office Goers Section */}
-          <section id="office-goers" className="py-16 md:py-20 px-4 bg-black text-yellow-400">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-8 md:mb-12">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
-                  For Office Goers — The Daily Commute, Fixed Right
-                </h2>
-                <p className="text-sm sm:text-base md:text-lg text-yellow-200 max-w-xl mx-auto px-4">
-                  A dedicated plan for people who commute to work daily. Make your mornings stress-free with our reliable office commute service.
-                </p>
-              </div>
-
-              <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
-                <div className="bg-yellow-500/20 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-yellow-500/40 h-[400px] md:h-[450px] flex flex-col">
-                  <div className="flex-grow">
-                    <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-yellow-400">Features for Office Commuters</h3>
-                    <ul className="space-y-3 md:space-y-4">
-                      <li className="flex items-center">
-                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
-                        <span className="text-sm md:text-base">Pre-book weekly or monthly rides</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
-                        <span className="text-sm md:text-base">Fixed pickup & drop schedules</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
-                        <span className="text-sm md:text-base">Priority customer support</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
-                        <span className="text-sm md:text-base">Regular driver assignment for familiarity and comfort</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
-                        <span className="text-sm md:text-base">Corporate billing / invoicing options</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/918053272266?text=Hi! I'd like to know more about office commute features" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-
-                <div className="bg-yellow-500/20 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-yellow-500/40 h-[400px] md:h-[450px] flex flex-col">
-                  <div className="flex-grow">
-                    <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-yellow-400">Benefits</h3>
-                    <ul className="space-y-3 md:space-y-4">
-                      <li className="flex items-center">
-                        <span className="text-yellow-300 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">⭐</span>
-                        <span className="text-sm md:text-base">Arrive relaxed and on time</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-yellow-300 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">⭐</span>
-                        <span className="text-sm md:text-base">Remove daily travel stress and last-minute cab hunts</span>
-                      </li>
-                      <li className="flex items-center">
-                        <span className="text-yellow-300 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">⭐</span>
-                        <span className="text-sm md:text-base">Safer rides with verified drivers and local compliance</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/918053272266?text=Hi! I'd like to pre-book office rides with Ridezo" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
-                      Enquire on WhatsApp
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          {/* Main Content Container - All sections animate together */}
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.01 }}
+            variants={{
+              initial: {},
+              animate: {
+                transition: {
+                  staggerChildren: 0.2,
+                  delayChildren: 0.1
+                }
+              }
+            }}
+          >
 
           {/* General Users Section */}
-          <section id="general-users" className="py-16 md:py-20 px-4 bg-yellow-100">
+          <motion.section
+            id="general-users"
+            className="py-16 md:py-20 px-4 bg-yellow-100"
+            variants={fadeInUp}
+          >
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-black">
+              <motion.div
+                className="text-center mb-12 md:mb-16"
+                variants={fadeInUp}
+              >
+                <motion.h2
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-black"
+                  variants={fadeInUp}
+                >
                   For Everyone Else — Flexible, Anytime, Anywhere
-                </h2>
-                <p className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto px-4">
+                </motion.h2>
+                <motion.p
+                  className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto px-4"
+                  variants={fadeInUp}
+                >
                   Ridezo is more than a commute solution — it&apos;s your travel buddy for every need. From city errands to weekend getaways.
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                <div className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col">
+              <motion.div
+                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+                variants={{
+                  initial: {},
+                  animate: {
+                    transition: {
+                      staggerChildren: 0.2
+                    }
+                  }
+                }}
+              >
+                <motion.div
+                  className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col"
+                  variants={scaleIn}
+                >
                   <div className="flex-grow">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black">Perfect For</h3>
+                    <motion.h3
+                      className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black"
+                      variants={fadeInUp}
+                    >
+                      Perfect For
+                    </motion.h3>
                     <ul className="space-y-4">
                       <li className="flex items-center">
                         <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -248,15 +207,23 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/918053272266?text=Hi! I'd like to book a ride with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                    <a href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
                       Enquire on WhatsApp
                     </a>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col">
+                <motion.div
+                  className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col"
+                  variants={scaleIn}
+                >
                   <div className="flex-grow">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black">Vehicle Options</h3>
+                    <motion.h3
+                      className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black"
+                      variants={fadeInUp}
+                    >
+                      Vehicle Options
+                    </motion.h3>
                     <ul className="space-y-4">
                       <li className="flex items-center">
                         <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -273,15 +240,23 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/918053272266?text=Hi! I'd like to explore outstation options with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                    <a href="https://wa.me/919654577654?text=Hi! I'd like to explore outstation options with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
                       Explore Options
                     </a>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col sm:col-span-2 lg:col-span-1">
+                <motion.div
+                  className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col sm:col-span-2 lg:col-span-1"
+                  variants={scaleIn}
+                >
                   <div className="flex-grow">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black">Booking</h3>
+                    <motion.h3
+                      className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black"
+                      variants={fadeInUp}
+                    >
+                      Booking
+                    </motion.h3>
                     <ul className="space-y-4">
                       <li className="flex items-center">
                         <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -298,60 +273,367 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/918053272266?text=Hi! I'd like to know about Ridezo pricing plans" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                    <a href="#pricing" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
                       View Pricing
                     </a>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
+
+          {/* Office Goers Section */}
+          <motion.section
+            id="office-goers"
+            className="py-16 md:py-20 px-4 bg-black text-yellow-400"
+            variants={fadeInUp}
+          >
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                className="text-center mb-8 md:mb-12"
+                variants={fadeInUp}
+              >
+                <motion.h2
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4"
+                  variants={fadeInUp}
+                >
+                  For Office Goers — The Daily Commute, Fixed Right
+                </motion.h2>
+                <motion.p
+                  className="text-sm sm:text-base md:text-lg text-yellow-200 max-w-xl mx-auto px-4"
+                  variants={fadeInUp}
+                >
+                  A dedicated plan for people who commute to work daily. Make your mornings stress-free with our reliable office commute service.
+                </motion.p>
+              </motion.div>
+
+              <motion.div
+                className="grid lg:grid-cols-2 gap-6 md:gap-8"
+                variants={{
+                  initial: {},
+                  animate: {
+                    transition: {
+                      staggerChildren: 0.2
+                    }
+                  }
+                }}
+              >
+                <motion.div
+                  className="bg-yellow-500/20 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-yellow-500/40 h-[400px] md:h-[450px] flex flex-col"
+                  variants={fadeInLeft}
+                >
+                  <div className="flex-grow">
+                    <motion.h3
+                      className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-yellow-400"
+                      variants={fadeInUp}
+                    >
+                      Features for Office Commuters
+                    </motion.h3>
+                    <ul className="space-y-3 md:space-y-4">
+                      <li className="flex items-center">
+                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
+                        <span className="text-sm md:text-base">Pre-book weekly or monthly rides</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
+                        <span className="text-sm md:text-base">Fixed pickup & drop schedules</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
+                        <span className="text-sm md:text-base">Priority customer support</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
+                        <span className="text-sm md:text-base">Regular driver assignment for familiarity and comfort</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-yellow-400 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">✓</span>
+                        <span className="text-sm md:text-base">Corporate billing / invoicing options</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex justify-center items-end pt-6">
+                    <a href="https://wa.me/919654577654?text=Hi! I'd like to know more about office commute features" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
+                      Learn More
+                    </a>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="bg-yellow-500/20 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-yellow-500/40 h-[400px] md:h-[450px] flex flex-col"
+                  variants={fadeInRight}
+                >
+                  <div className="flex-grow">
+                    <motion.h3
+                      className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-yellow-400"
+                      variants={fadeInUp}
+                    >
+                      Benefits
+                    </motion.h3>
+                    <ul className="space-y-3 md:space-y-4">
+                      <li className="flex items-center">
+                        <span className="text-yellow-300 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">⭐</span>
+                        <span className="text-sm md:text-base">Arrive relaxed and on time</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-yellow-300 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">⭐</span>
+                        <span className="text-sm md:text-base">Remove daily travel stress and last-minute cab hunts</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-yellow-300 mr-3 md:mr-4 text-lg md:text-xl flex-shrink-0">⭐</span>
+                        <span className="text-sm md:text-base">Safer rides with verified drivers and local compliance</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex justify-center items-end pt-6">
+                    <a href="https://wa.me/919654577654?text=Hi! I'd like to pre-book office rides with Ridezo" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg">
+                      Enquire on WhatsApp
+                    </a>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+          </motion.section>
 
           {/* How It Works Section */}
-          <section id="how-it-works" className="py-20 px-4 bg-yellow-50">
+          <motion.section
+            id="how-it-works"
+            className="py-20 px-4 bg-yellow-50"
+            variants={fadeInUp}
+          >
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">How It Works</h2>
-                <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              <motion.div
+                className="text-center mb-16"
+                variants={fadeInUp}
+              >
+                <motion.h2
+                  className="text-4xl md:text-5xl font-bold mb-6 text-black"
+                  variants={fadeInUp}
+                >
+                  How It Works
+                </motion.h2>
+                <motion.p
+                  className="text-xl text-gray-800 max-w-3xl mx-auto"
+                  variants={fadeInUp}
+                >
                   Simple, straightforward process to get you where you need to go, when you need to be there.
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
 
-              <div className="grid md:grid-cols-4 gap-8">
-                <div className="text-center group">
-                  <div className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform">
+              <motion.div
+                className="grid md:grid-cols-4 gap-8"
+                variants={{
+                  initial: {},
+                  animate: {
+                    transition: {
+                      staggerChildren: 0.15
+                    }
+                  }
+                }}
+              >
+                <motion.div
+                  className="text-center group"
+                  variants={scaleIn}
+                >
+                  <motion.div
+                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    variants={scaleIn}
+                  >
                     1
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-black">Choose Your Trip</h3>
-                  <p className="text-gray-800 leading-relaxed">Office plan, city ride, or outstation (cab/tempo traveller/self-drive).</p>
-                </div>
+                  </motion.div>
+                  <motion.h3
+                    className="text-xl font-bold mb-4 text-black"
+                    variants={fadeInUp}
+                  >
+                    Choose Your Trip
+                  </motion.h3>
+                  <motion.p
+                    className="text-gray-800 leading-relaxed"
+                    variants={fadeInUp}
+                  >
+                    Office plan, city ride, or outstation (cab/tempo traveller/self-drive).
+                  </motion.p>
+                </motion.div>
 
-                <div className="text-center group">
-                  <div className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform">
+                <motion.div
+                  className="text-center group"
+                  variants={scaleIn}
+                >
+                  <motion.div
+                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    variants={scaleIn}
+                  >
                     2
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-black">Pick Time & Pickup</h3>
-                  <p className="text-gray-800 leading-relaxed">One-time or recurring bookings.</p>
-                </div>
+                  </motion.div>
+                  <motion.h3
+                    className="text-xl font-bold mb-4 text-black"
+                    variants={fadeInUp}
+                  >
+                    Pick Time & Pickup
+                  </motion.h3>
+                  <motion.p
+                    className="text-gray-800 leading-relaxed"
+                    variants={fadeInUp}
+                  >
+                    One-time or recurring bookings.
+                  </motion.p>
+                </motion.div>
 
-                <div className="text-center group">
-                  <div className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform">
+                <motion.div
+                  className="text-center group"
+                  variants={scaleIn}
+                >
+                  <motion.div
+                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    variants={scaleIn}
+                  >
                     3
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-black">Get Matched</h3>
-                  <p className="text-gray-800 leading-relaxed">A verified driver or vehicle is assigned to your ride.</p>
-                </div>
+                  </motion.div>
+                  <motion.h3
+                    className="text-xl font-bold mb-4 text-black"
+                    variants={fadeInUp}
+                  >
+                    Get Matched
+                  </motion.h3>
+                  <motion.p
+                    className="text-gray-800 leading-relaxed"
+                    variants={fadeInUp}
+                  >
+                    A verified driver or vehicle is assigned to your ride.
+                  </motion.p>
+                </motion.div>
 
-                <div className="text-center group">
-                  <div className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform">
+                <motion.div
+                  className="text-center group"
+                  variants={scaleIn}
+                >
+                  <motion.div
+                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    variants={scaleIn}
+                  >
                     4
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-black">Ride With Confidence</h3>
-                  <p className="text-gray-800 leading-relaxed">Real-time support, WhatsApp updates, and consistent service.</p>
-                </div>
-              </div>
+                  </motion.div>
+                  <motion.h3
+                    className="text-xl font-bold mb-4 text-black"
+                    variants={fadeInUp}
+                  >
+                    Ride With Confidence
+                  </motion.h3>
+                  <motion.p
+                    className="text-gray-800 leading-relaxed"
+                    variants={fadeInUp}
+                  >
+                    Real-time support, WhatsApp updates, and consistent service.
+                  </motion.p>
+                </motion.div>
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
+
+          {/* Why Ridezo Section */}
+          <motion.section
+            id="why-ridezo"
+            className="py-16 md:py-20 px-4 bg-yellow-50"
+            variants={fadeInUp}
+          >
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                className="text-center mb-8 md:mb-12"
+                variants={fadeInUp}
+              >
+                <motion.h2
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-black"
+                  variants={fadeInUp}
+                >
+                  Why Choose Ridezo?
+                </motion.h2>
+                <motion.p
+                  className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto leading-relaxed px-4"
+                  variants={fadeInUp}
+                >
+                  We make commuting smarter, safer, and simpler. Whether you&apos;re an office commuter who wants peace of mind every morning, or planning a weekend getaway — Ridezo has you covered.
+                </motion.p>
+              </motion.div>
+
+              <motion.div
+                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+                variants={{
+                  initial: {},
+                  animate: {
+                    transition: {
+                      staggerChildren: 0.15
+                    }
+                  }
+                }}
+              >
+                <motion.div
+                  className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col"
+                  variants={scaleIn}
+                >
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
+                    <Clock className="text-lg md:text-xl text-yellow-400" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Punctuality You Can Count On</h3>
+                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Pre-book your everyday ride and never worry about delays. We understand the importance of being on time.</p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col"
+                  variants={scaleIn}
+                >
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
+                    <Shield className="text-lg md:text-xl text-yellow-400" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Verified, Professional Drivers</h3>
+                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Trained, background-checked drivers who put safety and comfort first in every journey.</p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col"
+                  variants={scaleIn}
+                >
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
+                    <Star className="text-lg md:text-xl text-yellow-400" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Consistent Comfort</h3>
+                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Same high standard every day — no surprises. Clean, comfortable vehicles every time.</p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col"
+                  variants={scaleIn}
+                >
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
+                    <DollarSign className="text-lg md:text-xl text-yellow-400" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Transparent Pricing</h3>
+                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Clear fares, no surge, no hidden fees. What you see is what you pay.</p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col"
+                  variants={scaleIn}
+                >
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
+                    <Users className="text-lg md:text-xl text-yellow-400" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">A Family-Like Experience</h3>
+                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Friendly support that treats your journey like it matters. We care about your comfort and safety.</p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-yellow-500 p-4 md:p-6 rounded-md shadow-md hover:shadow-lg transition-shadow border border-yellow-400 h-48 md:h-52 flex flex-col"
+                  variants={scaleIn}
+                >
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center mb-3">
+                    <Car className="text-lg md:text-xl text-yellow-400" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold mb-2 text-black">Your Travel Buddy</h3>
+                  <p className="text-gray-800 leading-relaxed flex-grow text-xs md:text-sm">Reliable service for every journey, big or small. From daily commutes to weekend getaways.</p>
+                </motion.div>
+              </motion.div>
+            </div>
+          </motion.section>
 
           {/* Safety & Quality Section */}
           <section id="safety" className="py-20 px-4 bg-yellow-500">
@@ -502,7 +784,7 @@ export default function Home() {
               </div>
 
               <div className="text-center mt-12">
-                <a href="https://wa.me/918053272266?text=Hi! I'd like to know about Ridezo pricing plans" className="bg-black text-yellow-400 px-8 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg inline-block">
+                <a href="https://wa.me/919654577654?text=Hi! I'd like to know about Ridezo pricing plans" className="bg-black text-yellow-400 px-8 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg inline-block">
                   Enquire on WhatsApp
                 </a>
               </div>
@@ -560,7 +842,11 @@ export default function Home() {
           </section>
 
           {/* FAQ Section */}
-          <section id="faq" className="py-16 md:py-20 px-4 bg-yellow-100">
+          <motion.section
+            id="faq"
+            className="py-16 md:py-20 px-4 bg-yellow-100"
+            variants={fadeInUp}
+          >
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
@@ -737,13 +1023,14 @@ export default function Home() {
 
               <div className="text-center mt-12">
                 <p className="text-gray-600 mb-4">Still have questions?</p>
-                <a href="https://wa.me/918053272266?text=Hi! I have a question about Ridezo services" className="inline-flex items-center bg-black text-yellow-400 px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
+                <a href="https://wa.me/919654577654?text=Hi! I have a question about Ridezo services" className="inline-flex items-center bg-black text-yellow-400 px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
                   <Phone className="mr-2" />
                   Contact Us on WhatsApp
                 </a>
               </div>
             </div>
-          </section>
+          </motion.section>
+          </motion.div>
 
           {/* Footer CTA Section */}
           <section id="contact" className="py-12 px-4 bg-black text-yellow-400">
@@ -769,11 +1056,11 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/918053272266?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg text-center">
+                <a href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-400 transition-colors shadow-lg text-center">
                   Enquire on WhatsApp
                 </a>
-                <a href="tel:+91-8053272266" className="border-2 border-yellow-500 text-yellow-500 px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-500 hover:text-black transition-colors text-center">
-                  Call Us: +91-8053272266
+                <a href="tel:+91-9654577654" className="border-2 border-yellow-500 text-yellow-500 px-6 py-2 rounded-full font-bold text-base hover:bg-yellow-500 hover:text-black transition-colors text-center">
+                  Call Us: +91-9654577654
                 </a>
               </div>
 
@@ -788,7 +1075,7 @@ export default function Home() {
           {/* Floating WhatsApp Button */}
           <div className="fixed bottom-6 right-6 z-50">
             <a 
-              href="https://wa.me/918053272266?text=Hi! I'd like to book a ride with Ridezo" 
+              href="https://wa.me/919654577654?text=Hi! I'd like to book a ride with Ridezo" 
               className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
           target="_blank"
           rel="noopener noreferrer"
@@ -805,3 +1092,4 @@ export default function Home() {
     </div>
   );
 }
+ 
