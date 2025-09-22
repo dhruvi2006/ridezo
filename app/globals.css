@@ -38,3 +38,22 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+/* Route line visual animation for Taxi Tour List */
+@keyframes car-move-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% - 16px));
+  }
+}
+
+.route-line-svg {
+  width: 100%;
+  height: 8px;
+}
+
+.route-car {
+  animation: car-move-x 2.2s linear infinite;
+}

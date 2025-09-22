@@ -21,7 +21,8 @@ import {
   Map,
   Heart,
   Calendar,
-  Briefcase
+  Briefcase,
+  ArrowLeftRight
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -56,6 +57,103 @@ export default function Home() {
   const faqRef = useRef<HTMLDivElement | null>(null);
   const officeBgImages = ['/img5.jpg', '/img6.jpg', '/img7.jpg'];
   const [officeBgIndex, setOfficeBgIndex] = useState<number>(0);
+  const [isRoutesModalOpen, setIsRoutesModalOpen] = useState<boolean>(false);
+  const [enquiry, setEnquiry] = useState({
+    from: 'Delhi',
+    to: 'Gurgaon',
+    name: '',
+    email: '',
+    phone: '',
+    startDate: '',
+    endDate: '',
+    pickupTime: '',
+    pickupLocation: '',
+    pinCode: '',
+    notes: ''
+  });
+  const [emailError, setEmailError] = useState<string>('');
+  const [phoneError, setPhoneError] = useState<string>('');
+
+  const validateEmail = (value: string) => {
+    if (!value) return '';
+    const re = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+    return re.test(value) ? '' : 'Enter a valid email address';
+  };
+
+  const validatePhone = (value: string) => {
+    if (!value) return 'Phone is required';
+    const digits = value.replace(/\D/g, '');
+    return digits.length === 10 ? '' : 'Enter a 10-digit phone number';
+  };
+
+  const openRoutesModal = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    setIsRoutesModalOpen(true);
+  };
+
+  const closeRoutesModal = () => {
+    setIsRoutesModalOpen(false);
+    setEnquiry({
+      from: 'Delhi',
+      to: 'Gurgaon',
+      name: '',
+      email: '',
+      phone: '',
+      startDate: '',
+      endDate: '',
+      pickupTime: '',
+      pickupLocation: '',
+      pinCode: '',
+      notes: ''
+    });
+    setEmailError('');
+    setPhoneError('');
+  };
+
+  const submitEnquiryToWhatsApp = (e: React.FormEvent) => {
+    e.preventDefault();
+    const emailErr = validateEmail(enquiry.email);
+    const phoneErr = validatePhone(enquiry.phone);
+    setEmailError(emailErr);
+    setPhoneError(phoneErr);
+    if (emailErr || phoneErr) return;
+    const number = '919873058354';
+    const parts = [
+      'Taxi Tour Enquiry',
+      '',
+      `Route: ${enquiry.from} → ${enquiry.to}`,
+      `Name: ${enquiry.name}`,
+      `Email: ${enquiry.email}`,
+      `Phone: ${enquiry.phone}`,
+      `Timeline: ${enquiry.startDate || '-'} to ${enquiry.endDate || '-'}`,
+      `Pickup time: ${enquiry.pickupTime || '-'}`,
+      `Pickup location: ${enquiry.pickupLocation || '-'}`,
+      `Pin code: ${enquiry.pinCode || '-'}`
+    ];
+    if (enquiry.notes.trim()) {
+      parts.push(`Notes: ${enquiry.notes.trim()}`);
+    }
+    const message = parts.join('\n');
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
+  // Helpers for date/time constraints
+  const getTodayDateString = () => {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  };
+  const getNowTimeString = () => {
+    const d = new Date();
+    const hh = String(d.getHours()).padStart(2, '0');
+    const mm = String(d.getMinutes()).padStart(2, '0');
+    return `${hh}:${mm}`;
+  };
+  const todayStr = getTodayDateString();
+  const nowStr = getNowTimeString();
 
   useEffect(() => {
     const intervalMs = 3000; // change every ~3 seconds
@@ -173,7 +271,7 @@ export default function Home() {
                     <div className="mb-4">
                       <h3 className="-mt-2 text-2xl md:text-3xl font-extrabold text-yellow-400">Why Choose Us ?</h3>
                       <div className="mt-2 h-px bg-white/20"></div>
-                    </div>
+                      </div>
                     <div className="relative flex-1 flex items-center">
                       <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-white/20"></div>
                       <div className="grid grid-cols-2 gap-8 w-full">
@@ -181,37 +279,88 @@ export default function Home() {
                           <div className="flex items-center gap-4">
                             <div className="text-4xl font-extrabold text-yellow-400">500+</div>
                             <div className="text-sm text-gray-200">Happy Customers</div>
-                          </div>
+                      </div>
                           <div className="flex items-center gap-4">
                             <div className="text-4xl font-extrabold text-yellow-400">99%</div>
                             <div className="text-sm text-gray-200">On-Time Rate</div>
-                          </div>
+                      </div>
                           <div className="flex items-center gap-4">
                             <div className="text-4xl font-extrabold text-yellow-400">24/7</div>
                             <div className="text-sm text-gray-200">Support</div>
-                          </div>
-                        </div>
+                      </div>
+                    </div>
                         <div className="flex flex-col gap-7">
                           <div className="flex items-center gap-4">
                             <div className="text-4xl font-extrabold text-yellow-400">4.52★</div>
                             <div className="text-sm text-gray-200">Average Rating</div>
-                          </div>
+                  </div>
                           <div className="flex items-center gap-4">
                             <div className="text-4xl font-extrabold text-yellow-400">25+</div>
                             <div className="text-sm text-gray-200">Cities Covered</div>
-                          </div>
+                </div>
                           <div className="flex items-center gap-4">
                             <div className="text-4xl font-extrabold text-yellow-400">10k+</div>
                             <div className="text-sm text-gray-200">Rides Completed</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              </div>
+            </div>
+              </div>
                   </div>
                 </div>
+                  </div>
               </div>
             </div>
           </section>
+
+          {/* Taxi Tour List */}
+          <motion.section
+            id="taxi-tours"
+            className="py-6 px-4 bg-white border-y border-gray-200"
+            variants={fadeInUp}
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center gap-3">
+                {/* Left label */}
+                <div className="shrink-0 inline-flex items-center gap-2 text-sm font-semibold text-gray-800">
+                  <MapPin className="w-4 h-4 text-blue-600" />
+                  City Tours
+                </div>
+
+                {/* Separator */}
+                <span className="text-gray-300">|</span>
+
+                {/* Middle routes - one-line, scrollable */}
+                <div className="flex-1 overflow-x-auto no-scrollbar">
+                  <div className="whitespace-nowrap text-sm text-gray-900 flex justify-center">
+                    {[
+                      'Delhi to Gurgaon',
+                      'Delhi to Noida',
+                      'Delhi to Ghaziabad',
+                      'Delhi to Agra',
+                      'Delhi to Jaipur'
+                    ].map((label, idx, arr) => (
+                      <span key={label} className="inline-block">
+                        <span className="hover:text-blue-600 font-medium transition-colors">{label}</span>
+                        {idx < arr.length - 1 && <span className="mx-3 text-gray-300">|</span>}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Separator */}
+                <span className="text-gray-300 hidden sm:inline">|</span>
+
+                {/* Right CTA */}
+                <button
+                  onClick={openRoutesModal}
+                  className="shrink-0 inline-flex items-center rounded-full bg-yellow-400 text-black px-4 py-2 text-sm font-bold hover:bg-yellow-300 transition-colors"
+                >
+                  Explore All Routes
+                </button>
+              </div>
+            </div>
+          </motion.section>
+
+          
 
           {/* Main Content Container - All sections animate together */}
           <motion.div
@@ -1099,6 +1248,133 @@ export default function Home() {
               </motion.div>
                   </div>
           </motion.section>
+
+          
+
+          {/* Explore All Routes - Modal */}
+          {isRoutesModalOpen && (
+            <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+              <div className="absolute inset-0 bg-black/50" onClick={closeRoutesModal}></div>
+              <div className="relative w-full max-w-xl rounded-2xl bg-white shadow-2xl border border-black/10 overflow-hidden">
+                <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-gray-50">
+                  <div className="flex items-center gap-2 text-gray-900 font-semibold">
+                    <MapPin className="w-5 h-5 text-blue-600" /> Explore All Routes
+                  </div>
+                  <button onClick={closeRoutesModal} className="text-gray-500 hover:text-gray-700">✕</button>
+                </div>
+                <form onSubmit={submitEnquiryToWhatsApp} className="p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-3 md:col-span-2">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">From</label>
+                      <input type="text" value={enquiry.from} readOnly className="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">To</label>
+                      <select
+                        value={enquiry.to}
+                        onChange={(e) => setEnquiry({ ...enquiry, to: e.target.value })}
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                      >
+                        {['Gurgaon','Noida','Ghaziabad','Agra','Jaipur'].map(opt => (
+                          <option key={opt} value={opt}>{opt}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input type="text" required value={enquiry.name} onChange={(e)=>setEnquiry({...enquiry,name:e.target.value})} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input
+                      type="email"
+                      value={enquiry.email}
+                      onChange={(e)=>{ const v=e.target.value; setEnquiry({...enquiry,email:v}); setEmailError(validateEmail(v)); }}
+                      className={`w-full rounded-lg border px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${emailError ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-yellow-400'}`}
+                    />
+                    {emailError && <p className="mt-1 text-xs text-red-600">{emailError}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                    <input
+                      type="tel"
+                      required
+                      value={enquiry.phone}
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      maxLength={10}
+                      onKeyDown={(e)=>{ const invalid=['e','E','+','-','.']; if(invalid.includes(e.key)) e.preventDefault(); }}
+                      onChange={(e)=>{ let v=e.target.value.replace(/\D/g,'').slice(0,10); setEnquiry({...enquiry,phone:v}); setPhoneError(validatePhone(v)); }}
+                      className={`w-full rounded-lg border px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${phoneError ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-yellow-400'}`}
+                    />
+                    {phoneError && <p className="mt-1 text-xs text-red-600">{phoneError}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Pickup Location</label>
+                    <input type="text" value={enquiry.pickupLocation} onChange={(e)=>setEnquiry({...enquiry,pickupLocation:e.target.value})} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Pin Code</label>
+                    <input
+                      type="tel"
+                      value={enquiry.pinCode}
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      maxLength={6}
+                      onKeyDown={(e)=>{ const invalid=['e','E','+','-','.']; if(invalid.includes(e.key)) e.preventDefault(); }}
+                      onChange={(e)=>{ let v=e.target.value.replace(/\D/g,'').slice(0,6); setEnquiry({...enquiry,pinCode:v}); }}
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
+                    <input
+                      type="date"
+                      min={todayStr}
+                      value={enquiry.startDate}
+                      onChange={(e)=>{
+                        const newStart = e.target.value;
+                        setEnquiry((prev)=>{
+                          const endAdjusted = prev.endDate && prev.endDate < newStart ? newStart : prev.endDate;
+                          return { ...prev, startDate: newStart, endDate: endAdjusted };
+                        });
+                      }}
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">End Date</label>
+                    <input
+                      type="date"
+                      min={enquiry.startDate || todayStr}
+                      value={enquiry.endDate}
+                      onChange={(e)=>setEnquiry({...enquiry,endDate:e.target.value})}
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Pickup Time</label>
+                    <input
+                      type="time"
+                      min={enquiry.startDate === todayStr ? nowStr : undefined}
+                      value={enquiry.pickupTime}
+                      onChange={(e)=>setEnquiry({...enquiry,pickupTime:e.target.value})}
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+                    <textarea rows={3} value={enquiry.notes} onChange={(e)=>setEnquiry({...enquiry,notes:e.target.value})} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Any special requests (optional)"></textarea>
+                  </div>
+                  <div className="md:col-span-2 flex items-center justify-end gap-3 pt-1">
+                    <button type="button" onClick={closeRoutesModal} className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50">Cancel</button>
+                    <button type="submit" className="inline-flex items-center rounded-lg bg-yellow-400 text-black px-5 py-2 text-sm font-bold hover:bg-yellow-300">Enquire</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )}
 
           {/* Why Ridezo Section */}
           <motion.section
