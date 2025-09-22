@@ -15,14 +15,12 @@ import {
   AlertTriangle,
   Building,
   ChevronDown,
-  Phone,
   CheckCircle,
   MessageCircle,
   Map,
-  Heart,
   Calendar,
   Briefcase,
-  ArrowLeftRight
+  
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -560,7 +558,7 @@ export default function Home() {
               <motion.div
                 className="overflow-x-auto no-scrollbar pb-4"
                 variants={fadeInUp}
-                ref={carFleetRef as any}
+                ref={carFleetRef}
               >
                 <motion.div
                   className="flex space-x-6 min-w-max px-4 marquee-track marquee-track-fleet"
@@ -1305,7 +1303,7 @@ export default function Home() {
                       pattern="[0-9]*"
                       maxLength={10}
                       onKeyDown={(e)=>{ const invalid=['e','E','+','-','.']; if(invalid.includes(e.key)) e.preventDefault(); }}
-                      onChange={(e)=>{ let v=e.target.value.replace(/\D/g,'').slice(0,10); setEnquiry({...enquiry,phone:v}); setPhoneError(validatePhone(v)); }}
+                      onChange={(e)=>{ const v=e.target.value.replace(/\D/g,'').slice(0,10); setEnquiry({...enquiry,phone:v}); setPhoneError(validatePhone(v)); }}
                       className={`w-full rounded-lg border px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${phoneError ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-yellow-400'}`}
                     />
                     {phoneError && <p className="mt-1 text-xs text-red-600">{phoneError}</p>}
@@ -1323,7 +1321,7 @@ export default function Home() {
                       pattern="[0-9]*"
                       maxLength={6}
                       onKeyDown={(e)=>{ const invalid=['e','E','+','-','.']; if(invalid.includes(e.key)) e.preventDefault(); }}
-                      onChange={(e)=>{ let v=e.target.value.replace(/\D/g,'').slice(0,6); setEnquiry({...enquiry,pinCode:v}); }}
+                      onChange={(e)=>{ const v=e.target.value.replace(/\D/g,'').slice(0,6); setEnquiry({...enquiry,pinCode:v}); }}
                       className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                     />
                   </div>
@@ -1725,7 +1723,7 @@ export default function Home() {
               <motion.div
                 className="overflow-x-auto no-scrollbar pb-6"
                 variants={fadeInUp}
-                ref={faqRef as any}
+                ref={faqRef}
               >
                 <motion.div
                   className="flex space-x-6 min-w-max px-4 marquee-track marquee-track-faq"
