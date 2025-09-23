@@ -245,66 +245,67 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/60"></div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-white">
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center text-white">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div className="lg:text-left">
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-                    Ridezo — Your Ultimate Travel Buddy <Car className="inline w-10 h-10 ml-3 text-yellow-400" />
+                    Ridezo — Your Ultimate Travel Buddy <Car className="inline w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 ml-2 sm:ml-3 text-yellow-400" />
                   </h1>
-                  <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                     Pre-booked rides, professional drivers, and reliable daily service. Get to work on time, every time.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transform">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" className="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transform">
                       Enquire on WhatsApp
                     </a>
-                    <a href="#pricing" className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 shadow-2xl hover:scale-105 transform">
+                    <a href="#pricing" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-black transition-all duration-300 shadow-2xl hover:scale-105 transform">
                       View Pricing
                     </a>
                   </div>
                 </div>
 
-                <div className="hidden lg:block">
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-2xl border border-white/20 min-h-[400px] flex flex-col">
+                {/* Stats section - now visible on mobile */}
+                <div className="block">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/20 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col">
                     <div className="mb-4">
-                      <h3 className="-mt-2 text-2xl md:text-3xl font-extrabold text-yellow-400">Why Choose Us ?</h3>
+                      <h3 className="-mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-yellow-400">Why Choose Us ?</h3>
                       <div className="mt-2 h-px bg-white/20"></div>
-                      </div>
+                    </div>
                     <div className="relative flex-1 flex items-center">
-                      <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-white/20"></div>
-                      <div className="grid grid-cols-2 gap-8 w-full">
-                        <div className="flex flex-col gap-7">
-                          <div className="flex items-center gap-4">
-                            <div className="text-4xl font-extrabold text-yellow-400">500+</div>
-                            <div className="text-sm text-gray-200">Happy Customers</div>
-                      </div>
-                          <div className="flex items-center gap-4">
-                            <div className="text-4xl font-extrabold text-yellow-400">99%</div>
-                            <div className="text-sm text-gray-200">On-Time Rate</div>
-                      </div>
-                          <div className="flex items-center gap-4">
-                            <div className="text-4xl font-extrabold text-yellow-400">24/7</div>
-                            <div className="text-sm text-gray-200">Support</div>
+                      <div className="hidden sm:block absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-white/20"></div>
+                      <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
+                        <div className="flex flex-col gap-4 sm:gap-5 lg:gap-7">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-yellow-400">500+</div>
+                            <div className="text-xs sm:text-sm text-gray-200">Happy Customers</div>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-yellow-400">99%</div>
+                            <div className="text-xs sm:text-sm text-gray-200">On-Time Rate</div>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-yellow-400">24/7</div>
+                            <div className="text-xs sm:text-sm text-gray-200">Support</div>
+                          </div>
+                        </div>
+                        <div className="flex flex-col gap-4 sm:gap-5 lg:gap-7">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-yellow-400">4.52★</div>
+                            <div className="text-xs sm:text-sm text-gray-200">Average Rating</div>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-yellow-400">25+</div>
+                            <div className="text-xs sm:text-sm text-gray-200">Cities Covered</div>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-yellow-400">10k+</div>
+                            <div className="text-xs sm:text-sm text-gray-200">Rides Completed</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                        <div className="flex flex-col gap-7">
-                          <div className="flex items-center gap-4">
-                            <div className="text-4xl font-extrabold text-yellow-400">4.52★</div>
-                            <div className="text-sm text-gray-200">Average Rating</div>
-                  </div>
-                          <div className="flex items-center gap-4">
-                            <div className="text-4xl font-extrabold text-yellow-400">25+</div>
-                            <div className="text-sm text-gray-200">Cities Covered</div>
-                </div>
-                          <div className="flex items-center gap-4">
-                            <div className="text-4xl font-extrabold text-yellow-400">10k+</div>
-                            <div className="text-sm text-gray-200">Rides Completed</div>
-              </div>
-            </div>
-              </div>
                   </div>
                 </div>
-                  </div>
               </div>
             </div>
           </section>
@@ -312,23 +313,24 @@ export default function Home() {
           {/* Taxi Tour List */}
           <motion.section
             id="taxi-tours"
-            className="py-6 px-4 bg-white border-y border-gray-200"
+            className="py-4 sm:py-6 px-4 bg-white border-y border-gray-200"
             variants={fadeInUp}
           >
             <div className="max-w-7xl mx-auto">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 {/* Left label */}
-                <div className="shrink-0 inline-flex items-center gap-2 text-sm font-semibold text-gray-800">
-                  <MapPin className="w-4 h-4 text-blue-600" />
-                  City Tours
+                <div className="shrink-0 inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-semibold text-gray-800">
+                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
+                  <span className="hidden xs:inline">City Tours</span>
+                  <span className="xs:hidden">Tours</span>
                 </div>
 
                 {/* Separator */}
-                <span className="text-gray-300">|</span>
+                <span className="text-gray-300 hidden xs:inline">|</span>
 
                 {/* Middle routes - one-line, scrollable */}
                 <div className="flex-1 overflow-x-auto no-scrollbar">
-                  <div className="whitespace-nowrap text-sm text-gray-900 flex justify-center">
+                  <div className="whitespace-nowrap text-xs sm:text-sm text-gray-900 flex justify-start sm:justify-center">
                     {[
                       'Delhi to Gurgaon',
                       'Delhi to Noida',
@@ -338,7 +340,7 @@ export default function Home() {
                     ].map((label, idx, arr) => (
                       <span key={label} className="inline-block">
                         <span className="hover:text-blue-600 font-medium transition-colors">{label}</span>
-                        {idx < arr.length - 1 && <span className="mx-3 text-gray-300">|</span>}
+                        {idx < arr.length - 1 && <span className="mx-2 sm:mx-3 text-gray-300">|</span>}
                       </span>
                     ))}
                   </div>
@@ -350,9 +352,10 @@ export default function Home() {
                 {/* Right CTA */}
                 <button
                   onClick={openRoutesModal}
-                  className="shrink-0 inline-flex items-center rounded-full bg-yellow-400 text-black px-4 py-2 text-sm font-bold hover:bg-yellow-300 transition-colors"
+                  className="shrink-0 inline-flex items-center rounded-full bg-yellow-400 text-black px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold hover:bg-yellow-300 transition-colors"
                 >
-                  Explore All Routes
+                  <span className="hidden sm:inline">Explore All Routes</span>
+                  <span className="sm:hidden">Routes</span>
                 </button>
               </div>
             </div>
@@ -379,22 +382,22 @@ export default function Home() {
           {/* General Users Section */}
           <motion.section
             id="general-users"
-            className="py-16 md:py-20 px-4 bg-yellow-100"
+            className="py-12 sm:py-16 md:py-20 px-4 bg-yellow-100"
             variants={fadeInUp}
           >
             <div className="max-w-7xl mx-auto">
               <motion.div
-                className="text-center mb-12 md:mb-16"
+                className="text-center mb-8 sm:mb-12 md:mb-16"
                 variants={fadeInUp}
               >
                 <motion.h2
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-black"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 text-black px-2"
                   variants={fadeInUp}
                 >
                   For Everyone Else — Flexible, Anytime, Anywhere
                 </motion.h2>
                 <motion.p
-                  className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto px-4"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-3xl mx-auto px-4"
                   variants={fadeInUp}
                 >
                   Ridezo is more than a commute solution — it&apos;s your travel buddy for every need. From city errands to weekend getaways.
@@ -402,7 +405,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
                 variants={{
                   initial: {},
                   animate: {
@@ -413,141 +416,141 @@ export default function Home() {
                 }}
               >
                 <motion.div
-                  className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col"
+                  className="bg-yellow-500 rounded-xl p-4 sm:p-6 md:p-8 border border-yellow-400 min-h-[350px] sm:min-h-[400px] md:min-h-[450px] flex flex-col"
                   variants={scaleIn}
                 >
                   <div className="flex-grow">
                     <motion.h3
-                      className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black"
+                      className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 md:mb-6 text-black"
                       variants={fadeInUp}
                     >
                       Perfect For
                     </motion.h3>
-                    <ul className="space-y-4">
-                      <li className="flex items-center">
-                        <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <MapPin className="text-yellow-400 text-xl" />
+                    <ul className="space-y-3 sm:space-y-4">
+                      <li className="flex items-start sm:items-center">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
+                          <MapPin className="text-yellow-400 text-base sm:text-lg md:text-xl" />
                         </div>
                         <div>
-                          <div className="font-semibold text-black">Tourism & Outstation Trips</div>
-                          <div className="text-gray-800 text-sm">Explore new destinations with ease</div>
+                          <div className="font-semibold text-black text-sm sm:text-base">Tourism & Outstation Trips</div>
+                          <div className="text-gray-800 text-xs sm:text-sm">Explore new destinations with ease</div>
                         </div>
                       </li>
-                      <li className="flex items-center">
-                        <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <Users className="text-yellow-400 text-xl" />
+                      <li className="flex items-start sm:items-center">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
+                          <Users className="text-yellow-400 text-base sm:text-lg md:text-xl" />
                         </div>
                         <div>
-                          <div className="font-semibold text-black">Family & Personal Travel</div>
-                          <div className="text-gray-800 text-sm">Safe, comfortable rides for all ages</div>
+                          <div className="font-semibold text-black text-sm sm:text-base">Family & Personal Travel</div>
+                          <div className="text-gray-800 text-xs sm:text-sm">Safe, comfortable rides for all ages</div>
                         </div>
                       </li>
-                      <li className="flex items-center">
-                        <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <Building2 className="text-yellow-400 text-xl" />
+                      <li className="flex items-start sm:items-center">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
+                          <Building2 className="text-yellow-400 text-base sm:text-lg md:text-xl" />
                         </div>
                         <div>
-                          <div className="font-semibold text-black">City Rides & Errands</div>
-                          <div className="text-gray-800 text-sm">Reliable transport, whenever you need it</div>
+                          <div className="font-semibold text-black text-sm sm:text-base">City Rides & Errands</div>
+                          <div className="text-gray-800 text-xs sm:text-sm">Reliable transport, whenever you need it</div>
                         </div>
                       </li>
                     </ul>
                   </div>
-                  <div className="flex justify-center items-end pt-6">
-                    <a href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                  <div className="flex justify-center items-end pt-4 sm:pt-6">
+                    <a href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" className="bg-black text-yellow-400 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-gray-800 transition-colors shadow-lg">
                       Enquire on WhatsApp
                     </a>
                   </div>
                 </motion.div>
 
                 <motion.div
-                  className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col"
+                  className="bg-yellow-500 rounded-xl p-4 sm:p-6 md:p-8 border border-yellow-400 min-h-[350px] sm:min-h-[400px] md:min-h-[450px] flex flex-col"
                   variants={scaleIn}
                 >
                   <div className="flex-grow">
                     <motion.h3
-                      className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black"
+                      className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 md:mb-6 text-black"
                       variants={fadeInUp}
                     >
                       Vehicle Options
                     </motion.h3>
-                    <ul className="space-y-4">
-                      <li className="flex items-center">
-                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-yellow-400 text-lg">✓</span>
+                    <ul className="space-y-3 sm:space-y-4">
+                      <li className="flex items-start sm:items-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-black rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
+                          <span className="text-yellow-400 text-sm sm:text-base md:text-lg">✓</span>
                         </div>
-                        <span className="text-gray-800 text-sm">All types of seats: 5, 7, 11, 18, 24 seaters</span>
-          </li>
-                      <li className="flex items-center">
-                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-yellow-400 text-lg">✓</span>
+                        <span className="text-gray-800 text-xs sm:text-sm">All types of seats: 5, 7, 11, 18, 24 seaters</span>
+                      </li>
+                      <li className="flex items-start sm:items-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-black rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
+                          <span className="text-yellow-400 text-sm sm:text-base md:text-lg">✓</span>
                         </div>
-                        <span className="text-gray-800 text-sm">Outstation cabs, tempo travellers, self-driver cars</span>
-          </li>
+                        <span className="text-gray-800 text-xs sm:text-sm">Outstation cabs, tempo travellers, self-driver cars</span>
+                      </li>
                     </ul>
                   </div>
-                  <div className="flex justify-center items-end pt-6">
-                    <a href="#car-fleet" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                  <div className="flex justify-center items-end pt-4 sm:pt-6">
+                    <a href="#car-fleet" className="bg-black text-yellow-400 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-gray-800 transition-colors shadow-lg">
                       Explore Options
                     </a>
                   </div>
                 </motion.div>
 
                 <motion.div
-                  className="bg-yellow-500 rounded-xl p-6 md:p-8 border border-yellow-400 h-[400px] md:h-[450px] flex flex-col sm:col-span-2 lg:col-span-1"
+                  className="bg-yellow-500 rounded-xl p-4 sm:p-6 md:p-8 border border-yellow-400 min-h-[350px] sm:min-h-[400px] md:min-h-[450px] flex flex-col sm:col-span-2 lg:col-span-1"
                   variants={scaleIn}
                 >
                   <div className="flex-grow">
                     <motion.h3
-                      className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-black"
+                      className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 md:mb-6 text-black"
                       variants={fadeInUp}
                     >
                       Booking
                     </motion.h3>
-                    <ul className="space-y-4">
-                      <li className="flex items-center">
-                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-yellow-400 text-lg">✓</span>
+                    <ul className="space-y-3 sm:space-y-4">
+                      <li className="flex items-start sm:items-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-black rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
+                          <span className="text-yellow-400 text-sm sm:text-base md:text-lg">✓</span>
                         </div>
-                        <span className="text-gray-800 text-sm">Book directly via WhatsApp</span>
+                        <span className="text-gray-800 text-xs sm:text-sm">Book directly via WhatsApp</span>
                       </li>
-                      <li className="flex items-center">
-                        <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-yellow-400 text-lg">✓</span>
+                      <li className="flex items-start sm:items-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-black rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
+                          <span className="text-yellow-400 text-sm sm:text-base md:text-lg">✓</span>
                         </div>
-                        <span className="text-gray-800 text-sm">Quick confirmations for all trip types</span>
+                        <span className="text-gray-800 text-xs sm:text-sm">Quick confirmations for all trip types</span>
                       </li>
                     </ul>
                   </div>
-                  <div className="flex justify-center items-end pt-6">
-                    <a href="#pricing" className="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg">
+                  <div className="flex justify-center items-end pt-4 sm:pt-6">
+                    <a href="#pricing" className="bg-black text-yellow-400 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-gray-800 transition-colors shadow-lg">
                       View Pricing
                     </a>
                   </div>
                 </motion.div>
               </motion.div>
-                </div>
+            </div>
           </motion.section>
 
           {/* Car Fleet Section */}
           <motion.section
             id="car-fleet"
-            className="py-20 px-4 bg-yellow-50"
+            className="py-12 sm:py-16 md:py-20 px-4 bg-yellow-50"
             variants={fadeInUp}
           >
             <div className="max-w-7xl mx-auto">
               <motion.div
-                className="text-center mb-16"
+                className="text-center mb-8 sm:mb-12 md:mb-16"
                 variants={fadeInUp}
               >
                 <motion.h2
-                  className="text-4xl md:text-5xl font-bold mb-6 text-black"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black"
                   variants={fadeInUp}
                 >
                   Our Car Fleet
                 </motion.h2>
                 <motion.p
-                  className="text-xl text-gray-700 max-w-3xl mx-auto"
+                  className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-2"
                   variants={fadeInUp}
                 >
                   Choose from our premium fleet of vehicles for comfortable and safe journeys across all your travel needs.
@@ -561,7 +564,7 @@ export default function Home() {
                 ref={carFleetRef}
               >
                 <motion.div
-                  className="flex space-x-6 min-w-max px-4 marquee-track marquee-track-fleet"
+                  className="flex space-x-3 sm:space-x-4 md:space-x-6 min-w-max px-2 sm:px-4 marquee-track marquee-track-fleet"
                   initial="initial"
                   whileInView="animate"
                   viewport={{ once: true, amount: 0.1 }}
@@ -576,41 +579,41 @@ export default function Home() {
                 >
                   {/* Aura Dzire */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/aura-dzire.png"
                         alt="Aura Dzire"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
-              </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    </div>
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
-                        <h3 className="text-xl font-bold text-black mb-2 leading-tight">Aura Dzire</h3>
-                        <p className="text-gray-600 text-sm mb-4 leading-relaxed">Perfect for comfortable city rides and short trips</p>
-            </div>
+                        <h3 className="text-lg sm:text-xl font-bold text-black mb-2 leading-tight">Aura Dzire</h3>
+                        <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">Perfect for comfortable city rides and short trips</p>
+                      </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-500">4 Seater</span>
-                        <span className="text-yellow-600 font-semibold">AC Available</span>
+                        <span className="text-xs sm:text-sm text-gray-500">4 Seater</span>
+                        <span className="text-yellow-600 font-semibold text-xs sm:text-sm">AC Available</span>
                       </div>
                     </div>
                   </motion.div>
 
                   {/* Ertiga With Carrier */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/car-image-3.png"
                         alt="Ertiga With Carrier"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                   </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">Ertiga With Carrier</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Spacious family vehicle with extra luggage space</p>
@@ -624,17 +627,17 @@ export default function Home() {
 
                   {/* Innova Crysta */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/innova-crysta-2.png"
                         alt="Innova Crysta"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                   </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">Innova Crysta</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Premium MPV for comfortable group travel</p>
@@ -648,17 +651,17 @@ export default function Home() {
 
                   {/* Innova Hycross */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/innova-hycross-car-e1755683914497.png"
                         alt="Innova Hycross"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                   </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">Innova Hycross</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Modern hybrid SUV for eco-friendly travel</p>
@@ -672,17 +675,17 @@ export default function Home() {
 
                   {/* Hatchback */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/hatchback-car.png"
                         alt="Hatchback Car"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                     </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">Hatchback</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Compact and fuel-efficient for city commutes</p>
@@ -696,17 +699,17 @@ export default function Home() {
 
                   {/* BMW/Audi/Mercedes */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/cars-1.png"
                         alt="BMW/Audi/Mercedes"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                     </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">BMW/Audi/Mercedes</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Luxury sedans for premium travel experience</p>
@@ -720,17 +723,17 @@ export default function Home() {
 
                   {/* Tempo Traveller */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/tempo-traveller.png"
                         alt="Tempo Traveller"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                     </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">Tempo Traveller</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Perfect for group travel and family outings</p>
@@ -744,17 +747,17 @@ export default function Home() {
 
                   {/* Force Urbania */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/force-urbania.png"
                         alt="Force Urbania"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                     </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">Force Urbania</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Spacious and reliable for large groups</p>
@@ -768,17 +771,17 @@ export default function Home() {
 
                   {/* Mini & Luxury Bus */}
                   <motion.div
-                    className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     variants={scaleIn}
                   >
-                    <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                    <div className="h-36 sm:h-40 md:h-48 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                       <img
                         src="https://cityyatra.in/wp-content/uploads/2025/08/bus-image-e1755695593719.png"
                         alt="Mini & Luxury Bus"
-                        className="h-32 w-auto object-contain"
+                        className="h-24 sm:h-28 md:h-32 w-auto object-contain"
                       />
                     </div>
-                    <div className="p-6 h-44 flex flex-col justify-between">
+                    <div className="p-4 sm:p-5 md:p-6 h-36 sm:h-40 md:h-44 flex flex-col justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-black mb-2 leading-tight">Mini & Luxury Bus</h3>
                         <p className="text-gray-600 text-sm mb-4 leading-relaxed">Perfect for large groups, events, and charters</p>
@@ -793,13 +796,13 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="text-center mt-12"
+                className="text-center mt-8 sm:mt-10 md:mt-12"
                 variants={fadeInUp}
               >
-                <p className="text-gray-600 mb-4 text-sm">Scroll horizontally to see all vehicles →</p>
+                <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Scroll horizontally to see all vehicles →</p>
                 <a
                   href="https://wa.me/919873058354?text=Hi! I'd like to know about available vehicles"
-                  className="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transform inline-block"
+                  className="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transform inline-block"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -812,7 +815,7 @@ export default function Home() {
           {/* Office Goers Section */}
           <motion.section
             id="office-goers"
-            className="relative py-24 px-4 overflow-hidden"
+            className="relative py-16 sm:py-20 md:py-24 px-4 overflow-hidden"
             variants={fadeInUp}
           >
             {/* Rotating background images with crossfade */}
@@ -829,21 +832,21 @@ export default function Home() {
               <div className="absolute inset-0 [mask-image:radial-gradient(70%_70%_at_50%_30%,black,transparent)]"></div>
             </div>
             <div className="max-w-7xl mx-auto relative">
-              <div className="text-center mb-14">
+              <div className="text-center mb-8 sm:mb-10 md:mb-14">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400/20 text-yellow-300 border border-yellow-300/30 text-xs font-semibold uppercase tracking-wider">Office Plan</div>
               </div>
               <motion.div
-                className="text-center mb-8 md:mb-12"
+                className="text-center mb-6 sm:mb-8 md:mb-12"
                 variants={fadeInUp}
               >
                 <motion.h2
-                  className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white drop-shadow-lg px-2"
                   variants={fadeInUp}
                 >
                   For Office Goers — The Daily Commute, Fixed Right
                 </motion.h2>
                 <motion.p
-                  className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto px-4"
+                  className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto px-4"
                   variants={fadeInUp}
                 >
                   A dedicated plan for people who commute to work daily. Make your mornings stress-free with our reliable office commute service.
@@ -851,7 +854,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="grid md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
                 variants={{
                   initial: {},
                   animate: {
@@ -862,70 +865,70 @@ export default function Home() {
                 }}
               >
                 <motion.div
-                  className="group relative p-7 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 h-[400px] flex flex-col overflow-hidden hover:-translate-y-0.5"
+                  className="group relative p-4 sm:p-6 md:p-7 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 min-h-[350px] sm:min-h-[380px] md:min-h-[400px] flex flex-col overflow-hidden hover:-translate-y-0.5"
                   variants={fadeInLeft}
                 >
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60"></div>
-                  <div className="mx-auto mb-5 w-14 h-14 rounded-xl bg-yellow-400/90 text-black flex items-center justify-center shadow-[0_8px_30px_rgba(250,204,21,0.45)] group-hover:scale-105 transition-transform"><Briefcase className="w-6 h-6" /></div>
-                  <h3 className="text-lg font-bold text-white text-center">Features for Office Commuters</h3>
-                  <div className="mt-3 mb-2 h-px bg-white/10"></div>
-                  <ul className="space-y-2 text-sm text-gray-100/90">
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Pre-book weekly or monthly rides</span></li>
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Fixed pickup & drop schedules</span></li>
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Priority customer support</span></li>
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Regular driver assignment for familiarity and comfort</span></li>
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Corporate billing / invoicing options</span></li>
+                  <div className="mx-auto mb-4 sm:mb-5 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-yellow-400/90 text-black flex items-center justify-center shadow-[0_8px_30px_rgba(250,204,21,0.45)] group-hover:scale-105 transition-transform"><Briefcase className="w-5 h-5 sm:w-6 sm:h-6" /></div>
+                  <h3 className="text-base sm:text-lg font-bold text-white text-center">Features for Office Commuters</h3>
+                  <div className="mt-2 sm:mt-3 mb-2 h-px bg-white/10"></div>
+                  <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-100/90">
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Pre-book weekly or monthly rides</span></li>
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Fixed pickup & drop schedules</span></li>
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Priority customer support</span></li>
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Regular driver assignment for familiarity and comfort</span></li>
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">✓</span><span>Corporate billing / invoicing options</span></li>
                   </ul>
-                  <div className="absolute inset-x-6 -bottom-1 h-px bg-gradient-to-r from-transparent via-yellow-300/50 to-transparent"></div>
+                  <div className="absolute inset-x-4 sm:inset-x-6 -bottom-1 h-px bg-gradient-to-r from-transparent via-yellow-300/50 to-transparent"></div>
                 </motion.div>
 
                 <motion.div
-                  className="group relative p-7 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 h-[400px] flex flex-col overflow-hidden hover:-translate-y-0.5"
+                  className="group relative p-4 sm:p-6 md:p-7 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 min-h-[350px] sm:min-h-[380px] md:min-h-[400px] flex flex-col overflow-hidden hover:-translate-y-0.5"
                   variants={fadeInRight}
                 >
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60"></div>
-                  <div className="mx-auto mb-5 w-14 h-14 rounded-xl bg-yellow-400/90 text-black flex items-center justify-center shadow-[0_8px_30px_rgba(250,204,21,0.45)] group-hover:scale-105 transition-transform"><CheckCircle className="w-6 h-6" /></div>
-                  <h3 className="text-lg font-bold text-white text-center">Benefits</h3>
-                  <div className="mt-3 mb-2 h-px bg-white/10"></div>
-                  <ul className="space-y-2 text-sm text-gray-100/90">
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">⭐</span><span>Arrive relaxed and on time</span></li>
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">⭐</span><span>Remove daily travel stress and last-minute cab hunts</span></li>
-                    <li className="flex items-start gap-3 rounded-md px-3 py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">⭐</span><span>Safer rides with verified drivers and local compliance</span></li>
+                  <div className="mx-auto mb-4 sm:mb-5 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-yellow-400/90 text-black flex items-center justify-center shadow-[0_8px_30px_rgba(250,204,21,0.45)] group-hover:scale-105 transition-transform"><CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" /></div>
+                  <h3 className="text-base sm:text-lg font-bold text-white text-center">Benefits</h3>
+                  <div className="mt-2 sm:mt-3 mb-2 h-px bg-white/10"></div>
+                  <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-100/90">
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">⭐</span><span>Arrive relaxed and on time</span></li>
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">⭐</span><span>Remove daily travel stress and last-minute cab hunts</span></li>
+                    <li className="flex items-start gap-2 sm:gap-3 rounded-md px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-white/5"><span className="text-yellow-300 mt-0.5">⭐</span><span>Safer rides with verified drivers and local compliance</span></li>
                   </ul>
-                  <div className="absolute inset-x-6 -bottom-1 h-px bg-gradient-to-r from-transparent via-yellow-300/50 to-transparent"></div>
+                  <div className="absolute inset-x-4 sm:inset-x-6 -bottom-1 h-px bg-gradient-to-r from-transparent via-yellow-300/50 to-transparent"></div>
                 </motion.div>
               </motion.div>
               {/* Single CTA for the section */}
-              <div className="mt-10 flex justify-center">
+              <div className="mt-6 sm:mt-8 md:mt-10 flex justify-center">
                 <a
                   href="https://wa.me/919873058354?text=Hi! I'd like to enquire about the Office Plan — For Office Goers — The Daily Commute, Fixed Right"
-                  className="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors shadow-xl hover:shadow-yellow-500/25 transform hover:scale-105"
+                  className="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-yellow-400 transition-colors shadow-xl hover:shadow-yellow-500/25 transform hover:scale-105"
                 >
                   Enquire on WhatsApp
                 </a>
               </div>
-                </div>
+            </div>
           </motion.section>
 
           {/* How It Works Section */}
           <motion.section
             id="how-it-works"
-            className="py-20 px-4 bg-yellow-50"
+            className="py-12 sm:py-16 md:py-20 px-4 bg-yellow-50"
             variants={fadeInUp}
           >
             <div className="max-w-7xl mx-auto">
               <motion.div
-                className="text-center mb-16"
+                className="text-center mb-8 sm:mb-12 md:mb-16"
                 variants={fadeInUp}
               >
                 <motion.h2
-                  className="text-4xl md:text-5xl font-bold mb-6 text-black"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black"
                   variants={fadeInUp}
                 >
                   How It Works
                 </motion.h2>
                 <motion.p
-                  className="text-xl text-gray-800 max-w-3xl mx-auto"
+                  className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto px-2"
                   variants={fadeInUp}
                 >
                   Simple, straightforward process to get you where you need to go, when you need to be there.
@@ -933,7 +936,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="grid md:grid-cols-4 gap-8"
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"
                 variants={{
                   initial: {},
                   animate: {
@@ -948,19 +951,19 @@ export default function Home() {
                   variants={scaleIn}
                 >
                   <motion.div
-                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    className="bg-black text-yellow-400 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold mx-auto mb-4 sm:mb-6 shadow-md group-hover:scale-105 transition-transform"
                     variants={scaleIn}
                   >
                     1
                   </motion.div>
                   <motion.h3
-                    className="text-xl font-bold mb-4 text-black"
+                    className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-black"
                     variants={fadeInUp}
                   >
                     Choose Your Trip
                   </motion.h3>
                   <motion.p
-                    className="text-gray-800 leading-relaxed"
+                    className="text-sm sm:text-base text-gray-800 leading-relaxed"
                     variants={fadeInUp}
                   >
                     Office plan, city ride, or outstation (cab/tempo traveller/self-drive).
@@ -972,19 +975,19 @@ export default function Home() {
                   variants={scaleIn}
                 >
                   <motion.div
-                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    className="bg-black text-yellow-400 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold mx-auto mb-4 sm:mb-6 shadow-md group-hover:scale-105 transition-transform"
                     variants={scaleIn}
                   >
                     2
                   </motion.div>
                   <motion.h3
-                    className="text-xl font-bold mb-4 text-black"
+                    className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-black"
                     variants={fadeInUp}
                   >
                     Pick Time & Pickup
                   </motion.h3>
                   <motion.p
-                    className="text-gray-800 leading-relaxed"
+                    className="text-sm sm:text-base text-gray-800 leading-relaxed"
                     variants={fadeInUp}
                   >
                     One-time or recurring bookings.
@@ -996,19 +999,19 @@ export default function Home() {
                   variants={scaleIn}
                 >
                   <motion.div
-                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    className="bg-black text-yellow-400 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold mx-auto mb-4 sm:mb-6 shadow-md group-hover:scale-105 transition-transform"
                     variants={scaleIn}
                   >
                     3
                   </motion.div>
                   <motion.h3
-                    className="text-xl font-bold mb-4 text-black"
+                    className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-black"
                     variants={fadeInUp}
                   >
                     Get Matched
                   </motion.h3>
                   <motion.p
-                    className="text-gray-800 leading-relaxed"
+                    className="text-sm sm:text-base text-gray-800 leading-relaxed"
                     variants={fadeInUp}
                   >
                     A verified driver or vehicle is assigned to your ride.
@@ -1020,19 +1023,19 @@ export default function Home() {
                   variants={scaleIn}
                 >
                   <motion.div
-                    className="bg-black text-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md group-hover:scale-105 transition-transform"
+                    className="bg-black text-yellow-400 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold mx-auto mb-4 sm:mb-6 shadow-md group-hover:scale-105 transition-transform"
                     variants={scaleIn}
                   >
                     4
                   </motion.div>
                   <motion.h3
-                    className="text-xl font-bold mb-4 text-black"
+                    className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-black"
                     variants={fadeInUp}
                   >
                     Ride With Confidence
                   </motion.h3>
                   <motion.p
-                    className="text-gray-800 leading-relaxed"
+                    className="text-sm sm:text-base text-gray-800 leading-relaxed"
                     variants={fadeInUp}
                   >
                     Real-time support, WhatsApp updates, and consistent service.
@@ -1045,27 +1048,27 @@ export default function Home() {
           {/* Outstation Routes Section */}
           <motion.section
             id="outstation"
-            className="py-20 px-4 bg-white relative overflow-hidden"
+            className="py-12 sm:py-16 md:py-20 px-4 bg-white relative overflow-hidden"
             variants={fadeInUp}
           >
             {/* Decorative background using img4 - anchored to bottom (background-image for precise control) */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[32rem] opacity-60" aria-hidden="true">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[24rem] sm:h-[28rem] md:h-[32rem] opacity-60" aria-hidden="true">
               <div className="w-full h-full bg-[url('/img4.jpg')] bg-cover bg-[position:50%_100%] md:bg-[position:50%_90%]"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/60 to-transparent"></div>
-                </div>
+            </div>
             <div className="max-w-7xl mx-auto">
               <motion.div
-                className="text-center mb-16"
+                className="text-center mb-8 sm:mb-12 md:mb-16"
                 variants={fadeInUp}
               >
                 <motion.h2
-                  className="text-4xl md:text-5xl font-bold mb-6 text-black"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black"
                   variants={fadeInUp}
                 >
                   Outstation Routes
                 </motion.h2>
                 <motion.p
-                  className="text-xl text-gray-700 max-w-3xl mx-auto"
+                  className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-2"
                   variants={fadeInUp}
                 >
                   Reliable outstation travel across major Indian cities. Safe, comfortable journeys with verified drivers.
@@ -1073,7 +1076,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true, amount: 0.1 }}
@@ -1098,10 +1101,10 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Mumbai</h3>
-                    <p className="text-gray-200 text-sm">Comfortable long-distance travel</p>
-                </div>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Mumbai</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Comfortable long-distance travel</p>
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -1116,9 +1119,9 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Jaipur</h3>
-                    <p className="text-gray-200 text-sm">Historic city adventures</p>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Jaipur</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Historic city adventures</p>
                 </div>
                 </motion.div>
 
@@ -1134,9 +1137,9 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Agra</h3>
-                    <p className="text-gray-200 text-sm">Taj Mahal & heritage sites</p>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Agra</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Taj Mahal & heritage sites</p>
                 </div>
                 </motion.div>
 
@@ -1152,9 +1155,9 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Pune</h3>
-                    <p className="text-gray-200 text-sm">Tech hub & cultural blend</p>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Pune</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Tech hub & cultural blend</p>
             </div>
                 </motion.div>
 
@@ -1170,9 +1173,9 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Dehradun</h3>
-                    <p className="text-gray-200 text-sm">Hill station getaway</p>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Dehradun</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Hill station getaway</p>
                         </div>
                 </motion.div>
 
@@ -1188,9 +1191,9 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Chandigarh</h3>
-                    <p className="text-gray-200 text-sm">Clean & green city</p>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Chandigarh</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Clean & green city</p>
                   </div>
                 </motion.div>
 
@@ -1206,9 +1209,9 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Lucknow</h3>
-                    <p className="text-gray-200 text-sm">Cultural capital of India</p>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Lucknow</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Cultural capital of India</p>
                         </div>
                 </motion.div>
 
@@ -1224,9 +1227,9 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-bold text-lg mb-1">Delhi → Chennai</h3>
-                    <p className="text-gray-200 text-sm">Southern gateway</p>
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                    <h3 className="text-white font-bold text-base sm:text-lg mb-1">Delhi → Chennai</h3>
+                    <p className="text-gray-200 text-xs sm:text-sm">Southern gateway</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -1251,17 +1254,18 @@ export default function Home() {
 
           {/* Explore All Routes - Modal */}
           {isRoutesModalOpen && (
-            <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+            <div className="fixed inset-0 z-[60] flex items-center justify-center p-2 sm:p-4">
               <div className="absolute inset-0 bg-black/50" onClick={closeRoutesModal}></div>
-              <div className="relative w-full max-w-xl rounded-2xl bg-white shadow-2xl border border-black/10 overflow-hidden">
-                <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-gray-50">
-                  <div className="flex items-center gap-2 text-gray-900 font-semibold">
-                    <MapPin className="w-5 h-5 text-blue-600" /> Explore All Routes
+              <div className="relative w-full max-w-xl max-h-[95vh] sm:max-h-[90vh] rounded-2xl bg-white shadow-2xl border border-black/10 overflow-hidden flex flex-col">
+                <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-4 border-b border-gray-200 bg-gray-50 flex-shrink-0">
+                  <div className="flex items-center gap-2 text-gray-900 font-semibold text-sm sm:text-base">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" /> Explore All Routes
                   </div>
-                  <button onClick={closeRoutesModal} className="text-gray-500 hover:text-gray-700">✕</button>
+                  <button onClick={closeRoutesModal} className="text-gray-500 hover:text-gray-700 text-lg sm:text-xl">✕</button>
                 </div>
-                <form onSubmit={submitEnquiryToWhatsApp} className="p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="grid grid-cols-2 gap-3 md:col-span-2">
+                <div className="flex-1 overflow-y-auto">
+                  <form onSubmit={submitEnquiryToWhatsApp} className="p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3 sm:col-span-2">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">From</label>
                       <input type="text" value={enquiry.from} readOnly className="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900" />
@@ -1361,15 +1365,16 @@ export default function Home() {
                       className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                     />
                   </div>
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
-                    <textarea rows={3} value={enquiry.notes} onChange={(e)=>setEnquiry({...enquiry,notes:e.target.value})} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Any special requests (optional)"></textarea>
-                  </div>
-                  <div className="md:col-span-2 flex items-center justify-end gap-3 pt-1">
-                    <button type="button" onClick={closeRoutesModal} className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50">Cancel</button>
-                    <button type="submit" className="inline-flex items-center rounded-lg bg-yellow-400 text-black px-5 py-2 text-sm font-bold hover:bg-yellow-300">Enquire</button>
-                  </div>
-                </form>
+                    <div className="sm:col-span-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+                      <textarea rows={3} value={enquiry.notes} onChange={(e)=>setEnquiry({...enquiry,notes:e.target.value})} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm" placeholder="Any special requests (optional)"></textarea>
+                    </div>
+                    <div className="sm:col-span-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2 sm:gap-3 pt-1">
+                      <button type="button" onClick={closeRoutesModal} className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-4 py-2.5 sm:py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50">Cancel</button>
+                      <button type="submit" className="inline-flex items-center justify-center rounded-lg bg-yellow-400 text-black px-5 py-2.5 sm:py-2 text-sm font-bold hover:bg-yellow-300">Enquire</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           )}
@@ -1543,109 +1548,109 @@ export default function Home() {
           </section>
 
           {/* Pricing Section */}
-          <section id="pricing" className="py-20 px-4 bg-yellow-100">
+          <section id="pricing" className="py-12 sm:py-16 md:py-20 px-4 bg-yellow-100">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">Simple & Transparent Pricing</h2>
-                <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black">Simple & Transparent Pricing</h2>
+                <p className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto px-2">
                   No surge pricing. No hidden charges. What you see is what you pay.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-yellow-500 p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow h-[500px] flex flex-col">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Building className="text-2xl text-yellow-400" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div className="bg-yellow-500 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow min-h-[450px] sm:min-h-[480px] md:min-h-[500px] flex flex-col">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <Building className="text-lg sm:text-xl md:text-2xl text-yellow-400" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-black">Office Plans</h3>
-                  <p className="text-gray-800 mb-6">Weekly / Monthly subscriptions — predictable monthly billing.</p>
-                  <div className="text-3xl font-bold text-black mb-2">₹2,500-₹8,000</div>
-                  <p className="text-gray-700 mb-6">per month</p>
-                  <ul className="text-left space-y-3 mb-8 flex-grow">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-black">Office Plans</h3>
+                  <p className="text-gray-800 mb-4 sm:mb-6 text-sm sm:text-base">Weekly / Monthly subscriptions — predictable monthly billing.</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-black mb-2">₹2,500-₹8,000</div>
+                  <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">per month</p>
+                  <ul className="text-left space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Pre-booked rides</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Pre-booked rides</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Fixed schedules</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Fixed schedules</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Priority support</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Priority support</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-yellow-500 p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow h-[500px] flex flex-col">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Building2 className="text-2xl text-yellow-400" />
+                <div className="bg-yellow-500 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow min-h-[450px] sm:min-h-[480px] md:min-h-[500px] flex flex-col">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <Building2 className="text-lg sm:text-xl md:text-2xl text-yellow-400" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-black">City Rides</h3>
-                  <p className="text-gray-800 mb-6">Metered / per-km pricing with fare estimates up front.</p>
-                  <div className="text-3xl font-bold text-black mb-2">₹150-₹500</div>
-                  <p className="text-gray-700 mb-6">per ride</p>
-                  <ul className="text-left space-y-3 mb-8 flex-grow">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-black">City Rides</h3>
+                  <p className="text-gray-800 mb-4 sm:mb-6 text-sm sm:text-base">Metered / per-km pricing with fare estimates up front.</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-black mb-2">₹150-₹500</div>
+                  <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">per ride</p>
+                  <ul className="text-left space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">On-demand booking</span>
+                      <span className="text-gray-800 text-sm sm:text-base">On-demand booking</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Transparent pricing</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Transparent pricing</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Instant booking</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Instant booking</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-yellow-500 p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow h-[500px] flex flex-col">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                    <MapPin className="text-2xl text-yellow-400" />
+                <div className="bg-yellow-500 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg text-center border border-yellow-400 hover:shadow-xl transition-shadow min-h-[450px] sm:min-h-[480px] md:min-h-[500px] flex flex-col">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <MapPin className="text-lg sm:text-xl md:text-2xl text-yellow-400" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-black">Outstation</h3>
-                  <p className="text-gray-800 mb-6">Fixed quotes based on route and vehicle type.</p>
-                  <div className="text-3xl font-bold text-black mb-2">₹3,000-₹15,000</div>
-                  <p className="text-gray-700 mb-6">per trip</p>
-                  <ul className="text-left space-y-3 mb-8 flex-grow">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-black">Outstation</h3>
+                  <p className="text-gray-800 mb-4 sm:mb-6 text-sm sm:text-base">Fixed quotes based on route and vehicle type.</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-black mb-2">₹3,000-₹15,000</div>
+                  <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">per trip</p>
+                  <ul className="text-left space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Long-distance travel</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Long-distance travel</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Planned routes</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Planned routes</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center mr-3">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex items-center justify-center mr-3">
                         <span className="text-yellow-400 text-xs">✓</span>
                       </div>
-                      <span className="text-gray-800">Tourism packages</span>
+                      <span className="text-gray-800 text-sm sm:text-base">Tourism packages</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="text-center mt-12">
-                <a href="https://wa.me/919873058354?text=Hi! I'd like to know about Ridezo pricing plans" className="bg-black text-yellow-400 px-8 py-3 rounded-full font-bold text-base hover:bg-gray-800 transition-colors shadow-lg inline-block">
+              <div className="text-center mt-8 sm:mt-10 md:mt-12">
+                <a href="https://wa.me/919873058354?text=Hi! I'd like to know about Ridezo pricing plans" className="bg-black text-yellow-400 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-gray-800 transition-colors shadow-lg inline-block">
                   Enquire on WhatsApp
                 </a>
               </div>
@@ -1653,48 +1658,48 @@ export default function Home() {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-20 px-4 bg-yellow-50">
+          <section className="py-12 sm:py-16 md:py-20 px-4 bg-yellow-50">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">What Our Customers Say</h2>
-                <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black">What Our Customers Say</h2>
+                <p className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto px-2">
                   Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their Ridezo experience.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-yellow-500 p-8 rounded-xl shadow-lg border border-yellow-400 h-[300px] flex flex-col">
-                  <div className="flex items-center mb-6">
-                    <div className="text-black text-2xl">★★★★★</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <div className="bg-yellow-500 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-yellow-400 min-h-[320px] sm:min-h-[340px] md:min-h-[360px] flex flex-col">
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <div className="text-black text-lg sm:text-xl md:text-2xl">★★★★★</div>
                   </div>
-                  <p className="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+                  <p className="text-gray-800 mb-4 sm:mb-6 text-sm sm:text-base md:text-lg leading-relaxed flex-grow">
                     &ldquo;Switching to Ridezo made my mornings stress-free. Always on time and drivers are professional. The pre-booking feature is a game-changer for my daily commute.&rdquo;
                   </p>
-                  <div className="flex items-center mt-auto">
-                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-yellow-400 font-bold text-lg mr-4">
+                  <div className="flex items-center mt-auto pt-4 border-t border-yellow-400/30">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center text-yellow-400 font-bold text-sm sm:text-base md:text-lg mr-3 sm:mr-4 flex-shrink-0">
                       P
                     </div>
-                    <div>
-                      <p className="font-bold text-black">Priya Sharma</p>
-                      <p className="text-gray-700">Marketing Lead, TechCorp</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-black text-sm sm:text-base truncate">Priya Sharma</p>
+                      <p className="text-gray-700 text-xs sm:text-sm truncate">Marketing Lead, TechCorp</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-yellow-500 p-8 rounded-xl shadow-lg border border-yellow-400 h-[300px] flex flex-col">
-                  <div className="flex items-center mb-6">
-                    <div className="text-black text-2xl">★★★★★</div>
+                <div className="bg-yellow-500 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg border border-yellow-400 min-h-[320px] sm:min-h-[340px] md:min-h-[360px] flex flex-col">
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <div className="text-black text-lg sm:text-xl md:text-2xl">★★★★★</div>
                   </div>
-                  <p className="text-gray-800 mb-6 text-lg leading-relaxed flex-grow">
+                  <p className="text-gray-800 mb-4 sm:mb-6 text-sm sm:text-base md:text-lg leading-relaxed flex-grow">
                     &ldquo;Booked an outstation trip for the family — comfortable car and great service. The driver was courteous and the journey was smooth. Highly recommended!&rdquo;
                   </p>
-                  <div className="flex items-center mt-auto">
-                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-yellow-400 font-bold text-lg mr-4">
+                  <div className="flex items-center mt-auto pt-4 border-t border-yellow-400/30">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center text-yellow-400 font-bold text-sm sm:text-base md:text-lg mr-3 sm:mr-4 flex-shrink-0">
                       R
                     </div>
-                    <div>
-                      <p className="font-bold text-black">Rohit Kumar</p>
-                      <p className="text-gray-700">Business Owner, Chennai</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-black text-sm sm:text-base truncate">Rohit Kumar</p>
+                      <p className="text-gray-700 text-xs sm:text-sm truncate">Business Owner, Chennai</p>
                     </div>
                   </div>
                 </div>
@@ -1705,31 +1710,31 @@ export default function Home() {
           {/* FAQ Section */}
           <motion.section
             id="faq"
-            className="py-16 md:py-20 px-4 bg-yellow-100"
+            className="py-12 sm:py-16 md:py-20 px-4 bg-yellow-100"
             variants={fadeInUp}
           >
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="text-yellow-400 text-2xl" />
+              <div className="text-center mb-8 sm:mb-10 md:mb-12">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <CheckCircle className="text-yellow-400 text-lg sm:text-xl md:text-2xl" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
-                <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-black">Frequently Asked Questions</h2>
+                <p className="text-base sm:text-lg text-gray-800 max-w-2xl mx-auto px-2">
                   Got questions? We&apos;ve got answers. Here are the most common questions about our services.
                 </p>
               </div>
 
               {/* Horizontal Scroll Container with endless auto-scroll */}
               <motion.div
-                className="overflow-x-auto no-scrollbar pb-6"
+                className="overflow-x-auto no-scrollbar pb-4 sm:pb-6"
                 variants={fadeInUp}
                 ref={faqRef}
               >
                 <motion.div
-                  className="flex space-x-6 min-w-max px-4 marquee-track marquee-track-faq"
+                  className="flex space-x-3 sm:space-x-4 md:space-x-6 min-w-max px-2 sm:px-4 marquee-track marquee-track-faq"
                   initial="initial"
                   whileInView="animate"
-                  viewport={{ once: true, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.05 }}
                   variants={{
                     initial: {},
                     animate: {
@@ -1741,7 +1746,7 @@ export default function Home() {
                 >
                   {/* FAQ 1 */}
                   <motion.div
-                    className={`flex-shrink-0 w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 1 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
+                    className={`flex-shrink-0 w-72 sm:w-80 md:w-88 lg:w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 1 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
                     variants={scaleIn}
                     onMouseEnter={() => setHoveredFaq(1)}
                     onMouseLeave={() => setHoveredFaq(null)}
@@ -1755,7 +1760,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <div className={`relative p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 1 ? 'bg-yellow-50/50' : ''}`}>
+                    <div className={`relative p-4 sm:p-5 md:p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 1 ? 'bg-yellow-50/50' : ''}`}>
                       {/* Background Pattern */}
                       <div className={`absolute inset-0 opacity-5 transition-opacity duration-500 ${hoveredFaq === 1 ? 'opacity-10' : ''}`}>
                         <div className="absolute top-4 right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
@@ -1774,7 +1779,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className={`text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 1 ? 'text-black' : 'text-gray-900'}`}>
+                            <h3 className={`text-base sm:text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 1 ? 'text-black' : 'text-gray-900'}`}>
                     Can I pre-book rides for the whole month?
                   </h3>
                   </div>
@@ -1802,7 +1807,7 @@ export default function Home() {
 
                   {/* FAQ 2 */}
                   <motion.div
-                    className={`flex-shrink-0 w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 2 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
+                    className={`flex-shrink-0 w-80 sm:w-88 md:w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 2 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
                     variants={scaleIn}
                     onMouseEnter={() => setHoveredFaq(2)}
                     onMouseLeave={() => setHoveredFaq(null)}
@@ -1816,7 +1821,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <div className={`relative p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 2 ? 'bg-yellow-50/50' : ''}`}>
+                    <div className={`relative p-4 sm:p-5 md:p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 2 ? 'bg-yellow-50/50' : ''}`}>
                       {/* Background Pattern */}
                       <div className={`absolute inset-0 opacity-5 transition-opacity duration-500 ${hoveredFaq === 2 ? 'opacity-10' : ''}`}>
                         <div className="absolute top-4 right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
@@ -1835,7 +1840,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className={`text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 2 ? 'text-black' : 'text-gray-900'}`}>
+                            <h3 className={`text-base sm:text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 2 ? 'text-black' : 'text-gray-900'}`}>
                     Are drivers background-checked?
                   </h3>
                   </div>
@@ -1863,7 +1868,7 @@ export default function Home() {
 
                   {/* FAQ 3 */}
                   <motion.div
-                    className={`flex-shrink-0 w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 3 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
+                    className={`flex-shrink-0 w-80 sm:w-88 md:w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 3 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
                     variants={scaleIn}
                     onMouseEnter={() => setHoveredFaq(3)}
                     onMouseLeave={() => setHoveredFaq(null)}
@@ -1877,7 +1882,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <div className={`relative p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 3 ? 'bg-yellow-50/50' : ''}`}>
+                    <div className={`relative p-4 sm:p-5 md:p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 3 ? 'bg-yellow-50/50' : ''}`}>
                       {/* Background Pattern */}
                       <div className={`absolute inset-0 opacity-5 transition-opacity duration-500 ${hoveredFaq === 3 ? 'opacity-10' : ''}`}>
                         <div className="absolute top-4 right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
@@ -1896,7 +1901,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className={`text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 3 ? 'text-black' : 'text-gray-900'}`}>
+                            <h3 className={`text-base sm:text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 3 ? 'text-black' : 'text-gray-900'}`}>
                     What if my driver is late?
                   </h3>
                   </div>
@@ -1924,7 +1929,7 @@ export default function Home() {
 
                   {/* FAQ 4 */}
                   <motion.div
-                    className={`flex-shrink-0 w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 4 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
+                    className={`flex-shrink-0 w-80 sm:w-88 md:w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 4 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
                     variants={scaleIn}
                     onMouseEnter={() => setHoveredFaq(4)}
                     onMouseLeave={() => setHoveredFaq(null)}
@@ -1938,7 +1943,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <div className={`relative p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 4 ? 'bg-yellow-50/50' : ''}`}>
+                    <div className={`relative p-4 sm:p-5 md:p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 4 ? 'bg-yellow-50/50' : ''}`}>
                       {/* Background Pattern */}
                       <div className={`absolute inset-0 opacity-5 transition-opacity duration-500 ${hoveredFaq === 4 ? 'opacity-10' : ''}`}>
                         <div className="absolute top-4 right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
@@ -1957,7 +1962,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className={`text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 4 ? 'text-black' : 'text-gray-900'}`}>
+                            <h3 className={`text-base sm:text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 4 ? 'text-black' : 'text-gray-900'}`}>
                     Can Ridezo handle outstation trips?
                   </h3>
                   </div>
@@ -1985,7 +1990,7 @@ export default function Home() {
 
                   {/* FAQ 5 */}
                   <motion.div
-                    className={`flex-shrink-0 w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 5 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
+                    className={`flex-shrink-0 w-80 sm:w-88 md:w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 5 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
                     variants={scaleIn}
                     onMouseEnter={() => setHoveredFaq(5)}
                     onMouseLeave={() => setHoveredFaq(null)}
@@ -1999,7 +2004,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <div className={`relative p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 5 ? 'bg-yellow-50/50' : ''}`}>
+                    <div className={`relative p-4 sm:p-5 md:p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 5 ? 'bg-yellow-50/50' : ''}`}>
                       {/* Background Pattern */}
                       <div className={`absolute inset-0 opacity-5 transition-opacity duration-500 ${hoveredFaq === 5 ? 'opacity-10' : ''}`}>
                         <div className="absolute top-4 right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
@@ -2018,7 +2023,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className={`text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 5 ? 'text-black' : 'text-gray-900'}`}>
+                            <h3 className={`text-base sm:text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 5 ? 'text-black' : 'text-gray-900'}`}>
                     How do I book a ride?
                   </h3>
                   </div>
@@ -2046,7 +2051,7 @@ export default function Home() {
 
                   {/* FAQ 6 */}
                   <motion.div
-                    className={`flex-shrink-0 w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 6 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
+                    className={`flex-shrink-0 w-80 sm:w-88 md:w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 6 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
                     variants={scaleIn}
                     onMouseEnter={() => setHoveredFaq(6)}
                     onMouseLeave={() => setHoveredFaq(null)}
@@ -2060,7 +2065,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <div className={`relative p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 6 ? 'bg-yellow-50/50' : ''}`}>
+                    <div className={`relative p-4 sm:p-5 md:p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 6 ? 'bg-yellow-50/50' : ''}`}>
                       {/* Background Pattern */}
                       <div className={`absolute inset-0 opacity-5 transition-opacity duration-500 ${hoveredFaq === 6 ? 'opacity-10' : ''}`}>
                         <div className="absolute top-4 right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
@@ -2079,7 +2084,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className={`text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 6 ? 'text-black' : 'text-gray-900'}`}>
+                            <h3 className={`text-base sm:text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 6 ? 'text-black' : 'text-gray-900'}`}>
                     What types of vehicles are available?
                   </h3>
                   </div>
@@ -2107,7 +2112,7 @@ export default function Home() {
 
                   {/* FAQ 7 */}
                   <motion.div
-                    className={`flex-shrink-0 w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 7 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
+                    className={`flex-shrink-0 w-80 sm:w-88 md:w-96 bg-gradient-to-br from-white via-yellow-50 to-white rounded-2xl shadow-xl border border-yellow-200/50 overflow-hidden transition-all duration-500 transform ${hoveredFaq === 7 ? 'shadow-2xl shadow-yellow-500/10 scale-[1.02]' : 'hover:shadow-2xl hover:shadow-yellow-500/10 hover:scale-[1.02]'}`}
                     variants={scaleIn}
                     onMouseEnter={() => setHoveredFaq(7)}
                     onMouseLeave={() => setHoveredFaq(null)}
@@ -2121,7 +2126,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <div className={`relative p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 7 ? 'bg-yellow-50/50' : ''}`}>
+                    <div className={`relative p-4 sm:p-5 md:p-6 cursor-pointer transition-colors duration-300 ${hoveredFaq === 7 ? 'bg-yellow-50/50' : ''}`}>
                       {/* Background Pattern */}
                       <div className={`absolute inset-0 opacity-5 transition-opacity duration-500 ${hoveredFaq === 7 ? 'opacity-10' : ''}`}>
                         <div className="absolute top-4 right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl"></div>
@@ -2140,7 +2145,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className={`text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 7 ? 'text-black' : 'text-gray-900'}`}>
+                            <h3 className={`text-base sm:text-lg font-bold transition-colors duration-300 leading-tight ${hoveredFaq === 7 ? 'text-black' : 'text-gray-900'}`}>
                     How do I pay?
                   </h3>
                   </div>
@@ -2168,15 +2173,19 @@ export default function Home() {
                 </motion.div>
               </motion.div>
 
-              <div className="text-center mt-12">
-               
-                <div className="mt-8">
-                  <p className="text-gray-600 mb-4">Still have questions?</p>
-                  <a href="https://wa.me/919873058354?text=Hi! I have a question about Ridezo services" className="inline-flex items-center bg-black text-yellow-400 px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
-                    <MessageCircle className="mr-2" />
+              {/* Mobile scroll indicator */}
+              <div className="block md:hidden text-center mt-6 mb-4">
+                <p className="text-gray-600 text-sm">← Scroll to see more questions →</p>
+              </div>
+
+              <div className="text-center mt-8 sm:mt-10 md:mt-12">
+                <div className="mt-6 sm:mt-8">
+                  <p className="text-gray-600 mb-3 sm:mb-4">Still have questions?</p>
+                  <a href="https://wa.me/919873058354?text=Hi! I have a question about Ridezo services" className="inline-flex items-center bg-black text-yellow-400 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-gray-800 transition-colors shadow-lg">
+                    <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
                     Contact Us on WhatsApp
                   </a>
-        </div>
+                </div>
               </div>
             </div>
           </motion.section>
@@ -2185,10 +2194,10 @@ export default function Home() {
           {/* Footer Section */}
           <footer className="bg-gray-900 text-white">
             {/* Main Footer Content */}
-            <div className="py-16 px-4">
+            <div className="py-12 sm:py-14 md:py-16 px-4">
               <div className="max-w-7xl mx-auto">
                 <motion.div
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-10 md:mb-12"
                   initial="initial"
                   whileInView="animate"
                   viewport={{ once: true, amount: 0.2 }}
@@ -2202,126 +2211,125 @@ export default function Home() {
                   }}
                 >
                   {/* Company Info */}
-                  <motion.div variants={fadeInUp}>
-                    <div className="flex items-center mb-6">
+                  <motion.div variants={fadeInUp} className="sm:col-span-2 lg:col-span-1">
+                    <div className="flex items-center mb-4 sm:mb-6">
                       <img
                         src="/logo.png"
                         alt="Ridezo Logo"
-                        className="h-10 w-10 mr-3"
+                        className="h-8 w-8 sm:h-10 sm:w-10 mr-3"
                       />
-                      <span className="text-2xl font-bold text-yellow-400">Ridezo</span>
+                      <span className="text-xl sm:text-2xl font-bold text-yellow-400">Ridezo</span>
                     </div>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
+                    <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                       Your ultimate travel buddy for daily commutes, outstation trips, and special occasions. Safe, reliable, and comfortable rides across India.
                     </p>
                   </motion.div>
 
                   {/* Quick Links */}
                   <motion.div variants={fadeInUp}>
-                    <h3 className="text-lg font-bold text-white mb-6">Quick Links</h3>
-                    <ul className="space-y-3">
-                      <li><a href="#hero" className="text-gray-300 hover:text-yellow-400 transition-colors">Home</a></li>
-                      <li><a href="#why-ridezo" className="text-gray-300 hover:text-yellow-400 transition-colors">Why Choose Us</a></li>
-                      <li><a href="#office-goers" className="text-gray-300 hover:text-yellow-400 transition-colors">Office Commuters</a></li>
-                      <li><a href="#general-users" className="text-gray-300 hover:text-yellow-400 transition-colors">General Users</a></li>
-                      <li><a href="#car-fleet" className="text-gray-300 hover:text-yellow-400 transition-colors">Our Fleet</a></li>
-                      <li><a href="#outstation" className="text-gray-300 hover:text-yellow-400 transition-colors">Outstation Routes</a></li>
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">Quick Links</h3>
+                    <ul className="space-y-2 sm:space-y-3">
+                      <li><a href="#hero" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base">Home</a></li>
+                      <li><a href="#why-ridezo" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base">Why Choose Us</a></li>
+                      <li><a href="#office-goers" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base">Office Commuters</a></li>
+                      <li><a href="#general-users" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base">General Users</a></li>
+                      <li><a href="#car-fleet" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base">Our Fleet</a></li>
+                      <li><a href="#outstation" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base">Outstation Routes</a></li>
                     </ul>
                   </motion.div>
 
                   {/* Services */}
                   <motion.div variants={fadeInUp}>
-                    <h3 className="text-lg font-bold text-white mb-6">Our Services</h3>
-                    <ul className="space-y-3">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">Our Services</h3>
+                    <ul className="space-y-2 sm:space-y-3">
                       <li className="flex items-center gap-2">
-                        <Car className="w-4 h-4 text-yellow-400" />
-                        <span className="text-gray-300">City Rides</span>
+                        <Car className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm sm:text-base">City Rides</span>
                       </li>
                       <li className="flex items-center gap-2">
-                        <Building2 className="w-4 h-4 text-yellow-400" />
-                        <span className="text-gray-300">Office Commute</span>
+                        <Building2 className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm sm:text-base">Office Commute</span>
                       </li>
                       <li className="flex items-center gap-2">
-                        <Map className="w-4 h-4 text-yellow-400" />
-                        <span className="text-gray-300">Outstation Travel</span>
+                        <Map className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm sm:text-base">Outstation Travel</span>
                       </li>
                       <li className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-yellow-400" />
-                        <span className="text-gray-300">Family Trips</span>
+                        <Users className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm sm:text-base">Family Trips</span>
                       </li>
                       <li className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-yellow-400" />
-                        <span className="text-gray-300">Event Transport</span>
+                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm sm:text-base">Event Transport</span>
                       </li>
                       <li className="flex items-center gap-2">
-                        <Briefcase className="w-4 h-4 text-yellow-400" />
-                        <span className="text-gray-300">Corporate Travel</span>
+                        <Briefcase className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm sm:text-base">Corporate Travel</span>
                       </li>
                     </ul>
                   </motion.div>
 
                   {/* Contact Info */}
                   <motion.div variants={fadeInUp}>
-                    <h3 className="text-lg font-bold text-white mb-6">Contact Us</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                        <svg className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">Contact Us</h3>
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <div>
-                          <p className="text-gray-300">+91-9873058354</p>
-                          <p className="text-sm text-gray-400">24/7 Available</p>
-                </div>
-                </div>
-                      <div className="flex items-center">
-                        <svg className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <p className="text-gray-300 text-sm sm:text-base">+91-9873058354</p>
+                          <p className="text-xs sm:text-sm text-gray-400">24/7 Available</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <div>
-                          <p className="text-gray-300">support@ridezo.com</p>
-                          <p className="text-sm text-gray-400">Quick Response</p>
-                </div>
-              </div>
-                      <div className="flex items-center">
-                        <svg className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <p className="text-gray-300 text-sm sm:text-base">support@ridezo.com</p>
+                          <p className="text-xs sm:text-sm text-gray-400">Quick Response</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <div>
-                          <p className="text-gray-300">Delhi NCR, India</p>
-                          <p className="text-sm text-gray-400">Serving All Cities</p>
+                          <p className="text-gray-300 text-sm sm:text-base">Delhi NCR, India</p>
+                          <p className="text-xs sm:text-sm text-gray-400">Serving All Cities</p>
                         </div>
                       </div>
                     </div>
                   </motion.div>
                 </motion.div>
-
               </div>
-              </div>
+            </div>
 
             {/* Bottom Footer */}
-            <div className="border-t border-gray-700 py-8 px-4">
+            <div className="border-t border-gray-700 py-6 sm:py-8 px-4">
               <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-                <div className="text-gray-400 text-sm mb-4 md:mb-0">
+                <div className="text-gray-400 text-xs sm:text-sm mb-3 md:mb-0">
                   © 2025 Ridezo. All rights reserved.
-              </div>
-                <div className="flex flex-wrap gap-6 text-sm">
+                </div>
+                <div className="flex flex-wrap justify-center md:justify-end gap-3 sm:gap-6 text-xs sm:text-sm">
                   <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Privacy Policy</a>
                   <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Terms of Service</a>
                   <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Refund Policy</a>
                   <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Contact Us</a>
-            </div>
+                </div>
               </div>
             </div>
           </footer>
 
           {/* Floating WhatsApp Button */}
-          <div className="fixed bottom-6 right-6 z-50">
+          <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
             <a 
               href="https://wa.me/919873058354?text=Hi! I'd like to book a ride with Ridezo" 
-              className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
-          target="_blank"
-          rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white p-2.5 sm:p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
         >
               <svg 
                 className="w-6 h-6" 
